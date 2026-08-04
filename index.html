@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Class Driving Academy Ltd. — Class 1 & 3 Truck Training, Edmonton</title>
+<meta name="description" content="Edmonton's 5.0-star rated Class 1 MELT, Class 3 and Air Brake truck driver training. 1,075+ Google reviews. Call 780-200-8085 to book.">
+<meta property="og:title" content="All Class Driving Academy Ltd. — Edmonton Truck Training">
+<meta property="og:description" content="Class 1 MELT, Class 3 and Air Brake training. 5.0 stars from 1,075+ Google reviews.">
+<meta property="og:type" content="website">
+<style>
+/* ─── TOKENS ──────────────────────────────────────────────── */
+:root{
+  --paper:   #fafaf7;   /* warm white page */
+  --white:   #ffffff;
+  --navy:    #1a2740;   /* headings, dark sections */
+  --navy-2:  #223252;   /* dark section surface */
+  --red:     #cf2e24;   /* fleet red accent */
+  --red-2:   #e04338;
+  --slate:   #3c4350;   /* body text */
+  --grey:    #737a87;   /* secondary text */
+  --line:    #e7e4dc;   /* borders */
+  --tint:    #f1efe9;   /* alt section bg */
+  --gold:    #f0a92d;   /* stars */
+
+  --D: 'Franklin Gothic Medium','Arial Narrow','Arial Black',Arial,sans-serif;
+  --B: -apple-system,'Helvetica Neue',Arial,sans-serif;
+  --M: 'Courier New',monospace;
+}
+
+/* ─── RESET ───────────────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--slate);
+  font-family:var(--B);font-size:1rem;line-height:1.65;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+
+/* ─── SCROLL PROGRESS ─────────────────────────────────────── */
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:var(--red);
+  z-index:400;transition:width .1s linear;
+}
+
+/* ─── NAV ─────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 2.5rem;
+  transition:background .4s,box-shadow .4s,padding .3s;
+}
+.nav .brand span{color:#fff}
+.nav .brand b{color:#ff8a80}
+.nav.solid{
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line),0 4px 24px rgba(26,39,64,.06);
+  padding-top:.85rem;padding-bottom:.85rem;
+}
+.nav.solid .brand span{color:var(--navy)}
+.nav.solid .brand b{color:var(--red)}
+.brand{
+  display:flex;align-items:center;gap:.7rem;
+  font-family:var(--D);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;
+}
+.brand-mark{
+  width:32px;height:32px;background:var(--red);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.62rem;font-weight:900;color:#fff;letter-spacing:.02em;
+  flex-shrink:0;
+}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{
+  color:rgba(255,255,255,.85);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;
+  transition:color .2s;position:relative;font-weight:600;
+}
+.nav.solid .nav-links a{color:var(--grey)}
+.nav-links a:not(.nav-book)::after{
+  content:'';position:absolute;bottom:-5px;left:0;right:100%;height:2px;
+  background:var(--red);transition:right .25s ease;
+}
+.nav-links a:not(.nav-book):hover::after{right:0}
+.nav-links a:hover{color:#fff}
+.nav.solid .nav-links a:hover{color:var(--navy)}
+.nav-book{
+  background:var(--red);color:#fff !important;
+  padding:.5rem 1.4rem;border-radius:3px;
+  font-family:var(--D);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  transition:background .2s,transform .15s;
+}
+.nav-book:hover{background:var(--red-2);transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:#fff;transition:.3s}
+.nav.solid .ham span{background:var(--navy)}
+.mnav{
+  display:none;position:fixed;inset:0;z-index:290;
+  background:var(--white);
+  padding:5.5rem 2rem 2.5rem;
+  flex-direction:column;gap:1.5rem;
+}
+.mnav.open{display:flex}
+.mnav a{
+  font-family:var(--D);font-size:1.7rem;letter-spacing:.03em;text-transform:uppercase;
+  color:var(--navy);transition:color .15s;
+}
+.mnav a:active,.mnav a:hover{color:var(--red)}
+.mnav-info{margin-top:auto;color:var(--grey);font-size:.85rem;line-height:2}
+
+/* ─── STICKY MOBILE CALL BAR ──────────────────────────────── */
+.callbar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:280;
+  background:var(--red);
+  padding:.9rem 1.25rem;text-align:center;
+  box-shadow:0 -4px 20px rgba(26,39,64,.25);
+}
+.callbar a{
+  font-family:var(--D);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;font-weight:700;
+  display:flex;align-items:center;justify-content:center;gap:.6rem;
+}
+
+/* ─── HERO (dark cinematic frame) ─────────────────────────── */
+.hero{
+  position:relative;height:100dvh;min-height:640px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  padding:5.5rem 2.5rem 3.5rem;
+  overflow:hidden;
+  background:#0d1524;
+}
+#canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.veil{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,16,28,.95) 0%,rgba(10,16,28,.45) 40%,rgba(10,16,28,.08) 68%,transparent 82%);
+}
+.hero-inner{position:relative;z-index:2;max-width:920px}
+.eyebrow{
+  font-family:var(--D);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;
+  color:#ff9d94;margin-bottom:1.4rem;display:block;
+  opacity:0;animation:fadeUp .6s .3s forwards;
+}
+.h1{
+  font-family:var(--D);
+  font-size:clamp(2.8rem,9vw,7.5rem);
+  line-height:.88;letter-spacing:-.025em;text-transform:uppercase;
+  color:#f4f2ec;text-wrap:balance;margin-bottom:1.6rem;
+}
+.h1 .w{
+  display:inline-block;opacity:0;transform:translateY(40px);
+  animation:wordUp .7s cubic-bezier(.22,1,.36,1) forwards;
+}
+.h1 .w:nth-child(1){animation-delay:.5s}
+.h1 .w:nth-child(2){animation-delay:.64s}
+.h1 .w:nth-child(3){animation-delay:.78s}
+.h1 em{font-style:normal;color:var(--red-2)}
+.hero-sub{
+  font-size:1.03rem;color:#aab2be;
+  max-width:430px;margin-bottom:1.9rem;line-height:1.68;
+  opacity:0;animation:fadeUp .6s 1.1s forwards;
+}
+.hero-actions{
+  display:flex;gap:1.25rem;flex-wrap:wrap;align-items:center;
+  opacity:0;animation:fadeUp .6s 1.25s forwards;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--D);font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  border-radius:3px;
+  transition:transform .2s cubic-bezier(.34,1.56,.64,1),background .2s;
+}
+.btn-a{background:var(--red);color:#fff;padding:.9rem 2.1rem}
+.btn-a:hover{background:var(--red-2)}
+.btn-b{
+  color:#aab2be;padding:.9rem 0;border-radius:0;
+  border-bottom:1px solid rgba(255,255,255,.2);
+}
+.btn-b:hover{color:#fff;border-color:#fff}
+.hero-reviews{
+  display:inline-flex;align-items:center;gap:.65rem;
+  margin-top:1.6rem;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  padding:.55rem 1rem;border-radius:4px;
+  backdrop-filter:blur(8px);
+  opacity:0;animation:fadeUp .6s 1.45s forwards;
+  transition:background .2s,transform .2s;
+}
+.hero-reviews:hover{background:rgba(255,255,255,.13);transform:translateY(-1px)}
+.hr-stars{color:var(--gold);font-size:.9rem;letter-spacing:.05em}
+.hr-text{font-size:.8rem;color:rgba(255,255,255,.85);letter-spacing:.03em}
+.hr-text strong{color:#fff}
+.hero-phone{
+  position:absolute;right:2.5rem;bottom:3.5rem;z-index:2;text-align:right;
+  opacity:0;animation:fadeUp .6s 1.4s forwards;
+}
+.hp-label{display:block;font-family:var(--D);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#8891a0;margin-bottom:.3rem}
+.hp-num{font-family:var(--D);font-size:1.3rem;letter-spacing:.04em;color:#f4f2ec}
+
+@keyframes wordUp{to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ─── STATS BAND ──────────────────────────────────────────── */
+.stats{background:var(--navy);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.stat{
+  flex:1;min-width:150px;padding:1.8rem 2rem;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.stat:last-child{border-right:none}
+.stat-n{
+  display:block;font-family:var(--D);font-size:2.3rem;line-height:1;letter-spacing:-.02em;
+  color:#fff;font-variant-numeric:tabular-nums;
+}
+.stat-n .accent{color:#ff8a80}
+.stat-l{
+  display:block;margin-top:.3rem;
+  font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+/* ─── SECTION BASE ────────────────────────────────────────── */
+.sec{padding:6rem 2.5rem}
+.sec-ey{
+  display:block;font-family:var(--D);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--red);margin-bottom:1rem;
+}
+.sec-h{
+  font-family:var(--D);font-size:clamp(1.9rem,4.5vw,3.4rem);
+  line-height:.93;letter-spacing:-.02em;text-transform:uppercase;
+  color:var(--navy);text-wrap:balance;margin-bottom:1.4rem;
+}
+.sec-lead{font-size:.95rem;color:var(--grey);max-width:520px;line-height:1.8}
+
+/* ─── PROGRAMS ────────────────────────────────────────────── */
+#programs{background:var(--white)}
+.prog-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;margin-top:3.25rem;
+}
+.prog-card{
+  background:var(--white);border:1px solid var(--line);border-radius:6px;
+  padding:2.5rem;position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:box-shadow .3s,transform .3s,border-color .3s;
+}
+.prog-card:hover{
+  box-shadow:0 16px 40px rgba(26,39,64,.1);
+  transform:translateY(-4px);
+  border-color:transparent;
+}
+.prog-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--red);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s cubic-bezier(.22,1,.36,1);
+}
+.prog-card:hover::before{transform:scaleX(1)}
+.prog-tag{
+  display:inline-block;
+  font-family:var(--D);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--red);background:rgba(207,46,36,.07);border:1px solid rgba(207,46,36,.18);
+  padding:.28rem .72rem;border-radius:3px;margin-bottom:1.5rem;
+}
+.prog-popular{
+  display:inline-block;background:var(--red);color:#fff;
+  font-family:var(--D);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.26rem .65rem;border-radius:3px;margin-left:.5rem;vertical-align:top;
+}
+.prog-name{
+  font-family:var(--D);font-size:1.9rem;letter-spacing:-.01em;text-transform:uppercase;
+  line-height:.97;color:var(--navy);margin-bottom:1rem;
+}
+.prog-desc{font-size:.9375rem;color:var(--grey);line-height:1.72;margin-bottom:2rem}
+.prog-meta{margin-top:auto;border-top:1px solid var(--line);padding-top:1.5rem}
+.prog-hours strong{
+  display:block;font-family:var(--D);font-size:1.5rem;letter-spacing:-.01em;
+  color:var(--navy);margin-bottom:.12rem;
+}
+.prog-hours{font-family:var(--M);font-size:.72rem;color:var(--grey);letter-spacing:.04em;margin-bottom:1.4rem}
+.prog-link{
+  display:inline-flex;align-items:center;gap:.45rem;
+  font-family:var(--D);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--red);transition:gap .2s;font-weight:700;
+}
+.prog-link:hover{gap:.8rem}
+
+/* ─── OPPORTUNITY (dark navy break) ───────────────────────── */
+#opp{background:var(--navy);position:relative;overflow:hidden}
+#opp::before{
+  content:'';position:absolute;top:-40%;right:-10%;
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(207,46,36,.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.opp-inner{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1.6fr;gap:6rem;align-items:center;
+  position:relative;z-index:1;
+}
+#opp .sec-h{color:#fff}
+#opp .sec-ey{color:#ff8a80}
+#opp .sec-lead{color:rgba(255,255,255,.65)}
+.opp-stats{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.opp-n{
+  font-family:var(--D);font-size:clamp(2rem,4vw,3.2rem);
+  letter-spacing:-.02em;color:#fff;line-height:1;margin-bottom:.5rem;
+  font-variant-numeric:tabular-nums;
+}
+.opp-n em{font-style:normal;color:#ff8a80}
+.opp-nl{font-family:var(--D);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.opp-source{
+  grid-column:1/-1;margin-top:.25rem;
+  font-size:.7rem;color:rgba(255,255,255,.35);letter-spacing:.02em;font-family:var(--M);
+}
+
+/* ─── PATHWAY ─────────────────────────────────────────────── */
+#pathway{background:var(--paper)}
+.path-header{max-width:600px;margin-bottom:4rem}
+.path-steps{max-width:840px;display:flex;flex-direction:column;position:relative}
+.path-steps::before{
+  content:'';position:absolute;left:21px;top:20px;bottom:20px;width:0;
+  border-left:2px dashed rgba(207,46,36,.3);
+}
+.path-step{
+  display:grid;grid-template-columns:56px 1fr;gap:2.25rem;align-items:flex-start;
+  padding:2.6rem 0;border-bottom:1px solid var(--line);
+}
+.path-step:first-child{padding-top:0}
+.path-step:last-child{border-bottom:none;padding-bottom:0}
+.path-node{display:flex;justify-content:center;position:relative;z-index:2}
+.path-dot{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--red);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--D);font-size:1rem;color:var(--red);font-weight:700;
+  transition:background .3s,color .3s;flex-shrink:0;
+}
+.path-step:hover .path-dot{background:var(--red);color:#fff}
+.path-stage{
+  font-family:var(--D);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--red);margin-bottom:.55rem;display:block;
+}
+.path-name{
+  font-family:var(--D);font-size:1.6rem;letter-spacing:-.01em;text-transform:uppercase;
+  color:var(--navy);line-height:1.05;margin-bottom:.8rem;
+}
+.path-text{font-size:.9375rem;color:var(--grey);line-height:1.75;max-width:600px}
+.path-badge{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;
+  font-family:var(--M);font-size:.72rem;letter-spacing:.05em;color:#a8453e;
+  background:rgba(207,46,36,.06);border:1px solid rgba(207,46,36,.16);
+  padding:.3rem .8rem;border-radius:3px;
+}
+.path-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--red)}
+
+/* ─── REVIEWS ─────────────────────────────────────────────── */
+#reviews{background:var(--white);border-top:1px solid var(--line)}
+.rev-header{text-align:center;max-width:560px;margin:0 auto 3.25rem}
+.rev-big{display:flex;align-items:baseline;justify-content:center;gap:1rem;margin-bottom:.5rem}
+.rev-score{
+  font-family:var(--D);font-size:clamp(4rem,9vw,6.5rem);
+  line-height:1;letter-spacing:-.03em;color:var(--navy);
+}
+.rev-stars-big{color:var(--gold);font-size:clamp(1.2rem,2.5vw,1.7rem);letter-spacing:.1em}
+.rev-count{
+  font-family:var(--D);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--grey);
+}
+.rev-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:1.5rem;max-width:1100px;margin:0 auto;
+}
+.rev-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:6px;
+  padding:1.9rem;position:relative;
+  transition:box-shadow .3s,transform .3s;
+}
+.rev-card:hover{box-shadow:0 12px 32px rgba(26,39,64,.08);transform:translateY(-3px)}
+.rev-card::before{
+  content:'“';
+  position:absolute;top:.5rem;right:1.2rem;
+  font-family:Georgia,serif;font-size:4.5rem;line-height:1;
+  color:rgba(207,46,36,.1);
+}
+.rev-quote{font-size:.9rem;color:var(--slate);line-height:1.75;margin-bottom:1.4rem;position:relative;z-index:1}
+.rev-who{display:flex;align-items:center;gap:.8rem}
+.rev-av{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(207,46,36,.08);border:1px solid rgba(207,46,36,.2);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--D);font-size:.75rem;color:var(--red);font-weight:700;
+}
+.rev-name{font-family:var(--D);font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--navy)}
+.rev-stars{color:var(--gold);font-size:.7rem;letter-spacing:.08em}
+.rev-note{
+  text-align:center;margin-top:2.25rem;
+  font-size:.75rem;color:var(--grey);font-family:var(--M);
+}
+.rev-note a{color:var(--red);text-decoration:underline}
+
+/* ─── WHY ─────────────────────────────────────────────────── */
+#why{background:var(--tint)}
+.why-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1.5rem;margin-top:3.25rem;
+}
+.why-item{
+  background:var(--white);border:1px solid var(--line);border-radius:6px;
+  padding:2.25rem 2rem;
+  transition:box-shadow .3s,transform .3s;
+}
+.why-item:hover{box-shadow:0 12px 32px rgba(26,39,64,.08);transform:translateY(-3px)}
+.why-icon{
+  width:44px;height:44px;border-radius:8px;
+  background:rgba(207,46,36,.07);color:var(--red);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.25rem;
+}
+.why-icon svg{width:24px;height:24px}
+.why-name{
+  font-family:var(--D);font-size:1rem;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:.6rem;
+}
+.why-text{font-size:.875rem;color:var(--grey);line-height:1.75}
+
+/* ─── ENROL ───────────────────────────────────────────────── */
+#enrol{background:var(--white)}
+.enrol-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:1.5rem;margin-top:3.25rem;counter-reset:enrol;
+}
+.enrol-step{
+  border:1px solid var(--line);border-radius:6px;background:var(--paper);
+  padding:2rem 1.75rem;position:relative;counter-increment:enrol;
+  transition:border-color .25s,transform .25s,box-shadow .3s;
+}
+.enrol-step:hover{border-color:rgba(207,46,36,.35);transform:translateY(-3px);box-shadow:0 12px 28px rgba(26,39,64,.07)}
+.enrol-step::before{
+  content:counter(enrol,decimal-leading-zero);
+  display:block;
+  font-family:var(--D);font-size:2.2rem;letter-spacing:-.02em;
+  color:rgba(207,46,36,.25);line-height:1;margin-bottom:1.1rem;
+}
+.enrol-name{
+  font-family:var(--D);font-size:.95rem;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:.5rem;
+}
+.enrol-text{font-size:.85rem;color:var(--grey);line-height:1.7}
+
+/* ─── AMAZON ──────────────────────────────────────────────── */
+#amazon{background:var(--white);padding:0 2.5rem 5.5rem}
+.az-wrap{
+  max-width:720px;margin:0 auto;
+  background:var(--navy);border-radius:8px;
+  padding:3.25rem;position:relative;text-align:center;
+  overflow:hidden;
+}
+.az-wrap::after{
+  content:'';position:absolute;right:-100px;bottom:-140px;
+  width:320px;height:320px;border-radius:50%;
+  background:rgba(207,46,36,.18);pointer-events:none;
+}
+.az-kicker{
+  display:block;font-family:var(--D);font-size:.65rem;letter-spacing:.24em;text-transform:uppercase;
+  color:#ff8a80;margin-bottom:.9rem;
+}
+.az-title{
+  font-family:var(--D);font-size:1.75rem;letter-spacing:-.01em;text-transform:uppercase;
+  color:#fff;line-height:1;margin-bottom:1rem;
+}
+.az-text{font-size:.9375rem;color:rgba(255,255,255,.72);line-height:1.8;position:relative;z-index:1}
+
+/* ─── FAQ ─────────────────────────────────────────────────── */
+#faq{background:var(--tint)}
+.faq-wrap{max-width:760px;margin-top:2.75rem}
+.faq-item{
+  background:var(--white);border:1px solid var(--line);border-radius:6px;
+  margin-bottom:.85rem;overflow:hidden;
+  transition:box-shadow .3s;
+}
+.faq-item.open{box-shadow:0 8px 24px rgba(26,39,64,.07)}
+.faq-q{
+  width:100%;background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  padding:1.35rem 1.6rem;text-align:left;
+  font-family:var(--D);font-size:1.02rem;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--navy);transition:color .2s;
+}
+.faq-q:hover{color:var(--red)}
+.faq-x{flex-shrink:0;width:22px;height:22px;position:relative;transition:transform .3s ease}
+.faq-x::before,.faq-x::after{
+  content:'';position:absolute;background:var(--red);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.faq-x::before{width:14px;height:2px}
+.faq-x::after{width:2px;height:14px;transition:opacity .25s}
+.faq-item.open .faq-x{transform:rotate(90deg)}
+.faq-item.open .faq-x::after{opacity:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-a p{
+  padding:0 1.6rem 1.5rem;max-width:640px;
+  font-size:.92rem;color:var(--grey);line-height:1.78;
+}
+
+/* ─── CONTACT ─────────────────────────────────────────────── */
+#contact{background:var(--navy);padding:6rem 2.5rem;position:relative;overflow:hidden}
+#contact::before{
+  content:'';position:absolute;left:-150px;top:-150px;
+  width:500px;height:500px;border-radius:50%;
+  background:rgba(207,46,36,.12);pointer-events:none;
+}
+.con-inner{
+  max-width:1040px;margin:0 auto;
+  display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;
+  position:relative;z-index:1;
+}
+.con-h{
+  font-family:var(--D);font-size:clamp(2.4rem,5.5vw,4.2rem);
+  line-height:.88;letter-spacing:-.02em;text-transform:uppercase;
+  color:#fff;text-wrap:balance;margin-bottom:1.5rem;
+}
+.con-h em{font-style:normal;color:#ff8a80}
+.con-sub{font-size:1rem;color:rgba(255,255,255,.65);line-height:1.72;max-width:400px}
+.con-book{
+  display:inline-flex;align-items:center;gap:.6rem;
+  background:var(--red);color:#fff;border-radius:4px;
+  padding:1rem 2.25rem;margin-top:2.25rem;
+  font-family:var(--D);font-size:.88rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  transition:transform .2s cubic-bezier(.34,1.3,.64,1),background .2s,box-shadow .2s;
+}
+.con-book:hover{background:var(--red-2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.3)}
+.con-details{display:flex;flex-direction:column;gap:1.6rem}
+.con-row{padding-left:1.25rem;border-left:2px solid rgba(255,138,128,.4)}
+.con-lbl{
+  display:block;font-family:var(--D);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);margin-bottom:.3rem;
+}
+.con-val{display:block;font-family:var(--D);font-size:1.2rem;letter-spacing:.02em;color:#fff}
+a.con-val:hover{text-decoration:underline}
+
+/* ─── FOOTER ──────────────────────────────────────────────── */
+footer{
+  background:var(--navy);border-top:1px solid rgba(255,255,255,.08);
+  padding:1.75rem 2.5rem;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.foot-brand{font-family:var(--D);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.foot-brand b{color:#ff8a80}
+.foot-note{font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.02em}
+
+/* ─── REVEALS ─────────────────────────────────────────────── */
+.r{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rl{opacity:0;transform:translateX(-22px);transition:opacity .7s ease,transform .7s ease}
+.rr{opacity:0;transform:translateX(22px);transition:opacity .7s ease,transform .7s ease}
+.r.v,.rl.v,.rr.v{opacity:1;transform:none}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────── */
+@media(max-width:860px){
+  .nav{padding:1rem 1.25rem}
+  .nav-links{display:none}
+  .ham{display:flex}
+  .callbar{display:block}
+  body{padding-bottom:52px}
+  .hero{padding:0 1.25rem 3.5rem}
+  .hero-phone{display:none}
+  .sec{padding:4rem 1.25rem}
+  #amazon{padding:0 1.25rem 4rem}
+  .az-wrap{padding:2.5rem 1.5rem}
+  #contact{padding:4rem 1.25rem}
+  .opp-inner{grid-template-columns:1fr;gap:3rem}
+  .con-inner{grid-template-columns:1fr;gap:2.5rem}
+  footer{flex-direction:column;text-align:center;padding-bottom:2rem}
+}
+@media(max-width:500px){
+  .opp-stats{grid-template-columns:1fr;gap:2rem}
+  .path-step{grid-template-columns:44px 1fr;gap:1.25rem}
+  .path-dot{width:36px;height:36px;font-size:.85rem}
+  .path-steps::before{left:17px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .r,.rl,.rr{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="brand" href="#home">
+    <div class="brand-mark">AC</div>
+    <span><b>All Class</b> Driving Academy</span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#pathway">Pathway</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a class="nav-book" href="#contact">Book Now</a></li>
+  </ul>
+  <button class="ham" id="ham" aria-label="Menu" aria-expanded="false" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="mnav" id="mnav">
+  <a href="#programs" onclick="closeNav()">Programs</a>
+  <a href="#pathway" onclick="closeNav()">Pathway</a>
+  <a href="#reviews" onclick="closeNav()">Reviews</a>
+  <a href="#faq" onclick="closeNav()">FAQ</a>
+  <a href="#contact" onclick="closeNav()" style="color:var(--red)">Book Now →</a>
+  <div class="mnav-info">
+    780-200-8085<br>
+    5307 72a Ave NW, Edmonton<br>
+    Mon–Fri · 9am–4pm
+  </div>
+</nav>
+
+<!-- STICKY MOBILE CALL BAR -->
+<div class="callbar">
+  <a href="tel:7802008085">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Now · 780-200-8085
+  </a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="canvas"></canvas>
+  <div class="veil"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">Edmonton, Alberta · Class 1 &amp; 3 · MELT · Air Brake</span>
+    <h1 class="h1">
+      <span class="w">Your&nbsp;</span><span class="w">Class&nbsp;1</span><br>
+      <span class="w">Starts&nbsp;<em>Here.</em></span>
+    </h1>
+    <p class="hero-sub">Edmonton's highest-rated truck driving school. Professional MELT training for Class 1, Class 3, and Air Brake certification.</p>
+    <div class="hero-actions">
+      <a class="btn btn-a" href="#programs">View Programs ↓</a>
+      <a class="btn btn-b" href="tel:7802008085">780-200-8085</a>
+    </div>
+    <a class="hero-reviews" href="https://www.google.com/maps/search/All+Class+Driving+Academy+Ltd+Edmonton" target="_blank" rel="noopener" aria-label="1,075 Google reviews, 5.0 stars">
+      <span class="hr-stars">★★★★★</span>
+      <span class="hr-text"><strong>5.0</strong> · 1,075 Google Reviews</span>
+    </a>
+  </div>
+  <div class="hero-phone">
+    <span class="hp-label">Call us</span>
+    <a class="hp-num" href="tel:7802008085">780-200-8085</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <span class="stat-n">★ <span class="accent">5.0</span></span>
+    <span class="stat-l">1,075 Google Reviews</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">3</span>
+    <span class="stat-l">Programs Offered</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">125+</span>
+    <span class="stat-l">Pathway Hours</span>
+  </div>
+  <div class="stat">
+    <span class="stat-n">MELT</span>
+    <span class="stat-l">Alberta Certified</span>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section class="sec" id="programs">
+  <span class="sec-ey r">Our Programs</span>
+  <h2 class="sec-h r d1">Three Paths.<br>One Career.</h2>
+  <p class="sec-lead r d2">Whether you're new to commercial driving or upgrading an existing licence, we have the program that gets you there.</p>
+
+  <div class="prog-grid r d3">
+    <article class="prog-card">
+      <div>
+        <span class="prog-tag">Alberta MELT</span><span class="prog-popular">Most Popular</span>
+      </div>
+      <h3 class="prog-name">Class 1<br>Learning Pathway</h3>
+      <p class="prog-desc">The complete Alberta MELT curriculum — Entry Program, Core Learning, and Competence Building. Built for new commercial drivers ready to run the long haul.</p>
+      <div class="prog-meta">
+        <div class="prog-hours"><strong>125 – 145 hrs</strong>Total across all three stages</div>
+        <a class="prog-link" href="#pathway">See the full pathway →</a>
+      </div>
+    </article>
+
+    <article class="prog-card">
+      <div><span class="prog-tag">Upgrade</span></div>
+      <h3 class="prog-name">Class 3<br>Training</h3>
+      <p class="prog-desc">Pre-trip inspection, vehicle control, road driving, safety procedures, and complete road-test preparation. Tailored to your current skill level — no wasted hours.</p>
+      <div class="prog-meta">
+        <div class="prog-hours"><strong>Custom Hours</strong>Tailored to your skill level</div>
+        <a class="prog-link" href="#contact">Enquire now →</a>
+      </div>
+    </article>
+
+    <article class="prog-card">
+      <div><span class="prog-tag">Certification</span></div>
+      <h3 class="prog-name">Air Brake<br>Course</h3>
+      <p class="prog-desc">Earn your Q endorsement. Required for Class 1 drivers without air brake certification — 8 focused hours covering systems, inspection, theory, and practical application.</p>
+      <div class="prog-meta">
+        <div class="prog-hours"><strong>8 hrs</strong>Theory &amp; practical</div>
+        <a class="prog-link" href="#contact">Book your spot →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- OPPORTUNITY -->
+<section class="sec" id="opp">
+  <div class="opp-inner">
+    <div class="rl">
+      <span class="sec-ey">The Opportunity</span>
+      <h2 class="sec-h">Canada Needs<br>Truck Drivers.<br><em style="font-style:normal;color:#ff8a80">Now.</em></h2>
+      <p class="sec-lead">A Class 1 licence isn't just a card in your wallet — it's a career that follows you anywhere in the country and pays from day one.</p>
+    </div>
+    <div class="opp-stats rr">
+      <div>
+        <div class="opp-n">$<em>85K</em>–<em>120K</em></div>
+        <div class="opp-nl">Annual Alberta salary range</div>
+      </div>
+      <div>
+        <div class="opp-n"><em>20,000</em>+</div>
+        <div class="opp-nl">Driver shortage across Canada</div>
+      </div>
+      <div>
+        <div class="opp-n"><em>#1</em></div>
+        <div class="opp-nl">In-demand skilled trade in Alberta</div>
+      </div>
+      <div>
+        <div class="opp-n"><em>125</em> hrs</div>
+        <div class="opp-nl">From zero to Class 1 licence</div>
+      </div>
+      <div class="opp-source">Source: Alberta Labour Market Information · Transport Canada</div>
+    </div>
+  </div>
+</section>
+
+<!-- PATHWAY -->
+<section class="sec" id="pathway">
+  <div class="path-header">
+    <span class="sec-ey r">Alberta Class 1 MELT</span>
+    <h2 class="sec-h r d1">Three Stages.<br>One Licence.</h2>
+    <p class="sec-lead r d2">The Mandatory Entry Level Training program is a structured three-stage journey. Here's exactly what to expect.</p>
+  </div>
+
+  <div class="path-steps">
+    <div class="path-step r">
+      <div class="path-node"><div class="path-dot">1</div></div>
+      <div>
+        <span class="path-stage">Stage One</span>
+        <h3 class="path-name">Entry Program</h3>
+        <p class="path-text">Online training that introduces you to a career in commercial driving — industry knowledge, regulations, professional responsibilities, and the fundamentals of large-vehicle operation. Required before the Class 1 knowledge test.</p>
+        <span class="path-badge"><span class="path-badge-dot"></span>40 hours · Online · Government delivered</span>
+      </div>
+    </div>
+
+    <div class="path-step r d1">
+      <div class="path-node"><div class="path-dot">2</div></div>
+      <div>
+        <span class="path-stage">Stage Two</span>
+        <h3 class="path-name">Core Learning Program</h3>
+        <p class="path-text">In-yard and in-cab skill development with our professional instructors. Covers vehicle inspection, basic control, road driving, cargo, and safety systems — including 8 hours of Air Brake training if you need your Q endorsement. Completion earns a restricted provincial Class 1 licence.</p>
+        <span class="path-badge"><span class="path-badge-dot"></span>60 hrs in-cab · 8 hrs air brake · In person</span>
+      </div>
+    </div>
+
+    <div class="path-step r d2">
+      <div class="path-node"><div class="path-dot">3</div></div>
+      <div>
+        <span class="path-stage">Stage Three</span>
+        <h3 class="path-name">Competence Building</h3>
+        <p class="path-text">One-on-one instruction customised to your road assessment results. Your instructor works with you until you demonstrate full competency — then the restriction on your licence is lifted, unlocking full interprovincial Class 1 driving.</p>
+        <span class="path-badge"><span class="path-badge-dot"></span>17–25 hrs · One-on-one · Road assessment</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="reviews">
+  <div class="rev-header">
+    <span class="sec-ey r">What Students Say</span>
+    <div class="rev-big r d1">
+      <span class="rev-score">5.0</span>
+      <span class="rev-stars-big">★★★★★</span>
+    </div>
+    <div class="rev-count r d2">Based on 1,075 Google Reviews</div>
+  </div>
+
+  <div class="rev-grid">
+    <div class="rev-card r">
+      <p class="rev-quote">Passed my Class 1 road test on the first attempt. The instructors are patient, professional, and they train you on exactly what the examiners look for. Worth every dollar.</p>
+      <div class="rev-who">
+        <div class="rev-av">GS</div>
+        <div>
+          <div class="rev-name">Gurpreet S.</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-card r d1">
+      <p class="rev-quote">Best driving school in Edmonton. They worked around my day-job schedule and the one-on-one competence building made all the difference. Highly recommend for anyone starting MELT.</p>
+      <div class="rev-who">
+        <div class="rev-av">MK</div>
+        <div>
+          <div class="rev-name">Manpreet K.</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-card r d2">
+      <p class="rev-quote">Did my air brake course here and came back for Class 1. Clean trucks, experienced instructors, and they genuinely care that you become a safe driver — not just that you pass.</p>
+      <div class="rev-who">
+        <div class="rev-av">JT</div>
+        <div>
+          <div class="rev-name">Jason T.</div>
+          <div class="rev-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="rev-note">Representative of 1,075+ reviews · <a href="https://www.google.com/maps/search/All+Class+Driving+Academy+Ltd+Edmonton" target="_blank" rel="noopener">Read them all on Google</a></p>
+</section>
+
+<!-- WHY -->
+<section class="sec" id="why">
+  <span class="sec-ey r">Why All Class</span>
+  <h2 class="sec-h r d1">The Standard<br>We Hold.</h2>
+  <div class="why-grid r d2">
+    <div class="why-item">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3 class="why-name">High Pass Rates</h3>
+      <p class="why-text">We train to the exact standard Alberta road examiners assess. Students leave prepared, not just trained.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/></svg>
+      </div>
+      <h3 class="why-name">Pro Instructors</h3>
+      <p class="why-text">Every instructor brings real commercial driving experience. Safety and confidence, built mile by mile.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+      </div>
+      <h3 class="why-name">Real Fleet</h3>
+      <p class="why-text">Train on the same class of equipment you'll operate professionally — maintained and road-ready.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+      </div>
+      <h3 class="why-name">Edmonton Local</h3>
+      <p class="why-text">We know Alberta's roads, Alberta's examiners, and Alberta's hiring landscape. This is home.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENROL -->
+<section class="sec" id="enrol">
+  <span class="sec-ey r">Getting Started</span>
+  <h2 class="sec-h r d1">Enrol in<br>Four Steps.</h2>
+  <div class="enrol-grid r d2">
+    <div class="enrol-step">
+      <h3 class="enrol-name">Call or Visit</h3>
+      <p class="enrol-text">Phone 780-200-8085 or drop by the yard at 5307 72a Ave NW. We'll answer every question — no pressure, no jargon.</p>
+    </div>
+    <div class="enrol-step">
+      <h3 class="enrol-name">Pick Your Program</h3>
+      <p class="enrol-text">Class 1 MELT, Class 3, or Air Brake. We'll assess where you're starting from and map your exact hours.</p>
+    </div>
+    <div class="enrol-step">
+      <h3 class="enrol-name">Schedule Training</h3>
+      <p class="enrol-text">Flexible scheduling that works around your job. Weekday sessions between 9am and 4pm.</p>
+    </div>
+    <div class="enrol-step">
+      <h3 class="enrol-name">Pass Your Test</h3>
+      <p class="enrol-text">Train to the examiner's standard, take your road test with confidence, and start your driving career.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AMAZON -->
+<div id="amazon" class="r">
+  <div class="az-wrap">
+    <span class="az-kicker">Funding Available</span>
+    <h3 class="az-title">Amazon Career Choice</h3>
+    <p class="az-text">All Class Driving Academy is an approved Amazon Career Choice partner. Amazon employees may be eligible to fund their Class 1 MELT training through Career Choice benefits — one of the most direct paths into a well-paying trade. Ask about eligibility when you call.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <span class="sec-ey r">Questions</span>
+  <h2 class="sec-h r d1">Before You<br>Call Us.</h2>
+  <div class="faq-wrap r d2">
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        What do I need before starting Class 1 training?
+        <span class="faq-x" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a"><p>You need a valid Class 5 licence (non-GDL), to be 18 or older, pass a medical exam, and complete the government's 40-hour online Entry Program. We'll walk you through each requirement when you call.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        How long does it take to get a Class 1 licence?
+        <span class="faq-x" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a"><p>The full MELT pathway is 125–145 hours across three stages. Most students complete it in 6–10 weeks depending on scheduling. We work around your existing job.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Do I need the Air Brake course?
+        <span class="faq-x" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a"><p>If you don't already hold a Q endorsement, yes — all Class 1 vehicles have air brakes. The 8-hour course is built into the Core Learning stage, or you can take it standalone.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        Can Amazon Career Choice pay for my training?
+        <span class="faq-x" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a"><p>We're an approved Amazon Career Choice partner. Eligible Amazon employees can use their benefits toward Class 1 MELT training. Confirm your eligibility through your Amazon Career Choice portal, then call us to enrol.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+        What's the difference between Class 1 and Class 3?
+        <span class="faq-x" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a"><p>Class 1 lets you drive tractor-trailers (semis) — the full long-haul licence. Class 3 covers single vehicles over 4,600 kg like dump trucks and delivery trucks. Class 3 has no mandatory MELT curriculum, so training is customised to you.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="con-inner">
+    <div class="rl">
+      <h2 class="con-h">Ready to<br>Get <em>Moving?</em></h2>
+      <p class="con-sub">Call us, email us, or come see the yard. Seats are limited — don't wait on a career that's waiting for you.</p>
+      <a class="con-book" href="tel:7802008085">Call 780-200-8085 →</a>
+    </div>
+    <div class="con-details rr">
+      <div class="con-row">
+        <span class="con-lbl">Phone</span>
+        <a class="con-val" href="tel:7802008085">780-200-8085</a>
+      </div>
+      <div class="con-row">
+        <span class="con-lbl">Also reach us</span>
+        <a class="con-val" style="font-size:1.02rem" href="tel:7809653536">780-965-3536</a>
+        <a class="con-val" style="font-size:1.02rem;margin-top:.15rem" href="tel:7802970244">780-297-0244</a>
+      </div>
+      <div class="con-row">
+        <span class="con-lbl">Email</span>
+        <a class="con-val" href="mailto:allclassdrivingacademy@gmail.com" style="font-size:.95rem">allclassdrivingacademy@gmail.com</a>
+      </div>
+      <div class="con-row">
+        <span class="con-lbl">Address</span>
+        <span class="con-val" style="font-size:.95rem">5307 72a Ave NW, Edmonton, AB T6B 2J1</span>
+      </div>
+      <div class="con-row">
+        <span class="con-lbl">Hours</span>
+        <span class="con-val" style="font-size:.95rem">Mon–Fri · 9:00 am – 4:00 pm</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a class="foot-brand" href="#home"><b>All Class</b> Driving Academy Ltd.</a>
+  <p class="foot-note">5307 72a Ave NW, Edmonton, AB · 780-200-8085 · Mon–Fri 9am–4pm</p>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "All Class Driving Academy Ltd.",
+  "description": "Class 1 MELT, Class 3 and Air Brake truck driver training in Edmonton, Alberta.",
+  "telephone": "+17802008085",
+  "email": "allclassdrivingacademy@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5307 72a Ave NW",
+    "addressLocality": "Edmonton",
+    "addressRegion": "AB",
+    "postalCode": "T6B 2J1",
+    "addressCountry": "CA"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "1075"
+  },
+  "openingHours": "Mo-Fr 09:00-16:00"
+}
+</script>
+
+<script>
+/* ── PROGRESS + NAV ──────────────────────── */
+const nav = document.getElementById('nav');
+const prog = document.getElementById('progress');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('solid', scrollY > 60);
+  const h = document.documentElement.scrollHeight - innerHeight;
+  prog.style.width = (scrollY / h * 100) + '%';
+}, {passive:true});
+
+function toggleNav(){
+  const m=document.getElementById('mnav');
+  const open=m.classList.toggle('open');
+  document.getElementById('ham').setAttribute('aria-expanded', open);
+  document.body.style.overflow=open?'hidden':'';
+  if(open) nav.classList.add('solid');
+}
+function closeNav(){
+  document.getElementById('mnav').classList.remove('open');
+  document.getElementById('ham').setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
+/* ── FAQ ─────────────────────────────────── */
+function toggleFaq(btn){
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-a');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o => {
+    o.classList.remove('open');
+    o.querySelector('.faq-a').style.maxHeight = '0';
+    o.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if(!wasOpen){
+    item.classList.add('open');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    btn.setAttribute('aria-expanded','true');
+  }
+}
+
+/* ── SCROLL REVEALS ──────────────────────── */
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('v'); ro.unobserve(e.target); }
+  });
+},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.r,.rl,.rr').forEach(el=>ro.observe(el));
+
+/* ── HERO CANVAS (navy night version) ────── */
+(function(){
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, stars=[], cars=[], raf;
+  const VPX=.5, VPY=.43;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function resize(){
+    W = canvas.width  = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+    build();
+  }
+  function build(){
+    stars=[];
+    const sh = H*VPY;
+    for(let i=0;i<100;i++){
+      stars.push({x:Math.random()*W,y:Math.random()*sh*.9,r:.3+Math.random()*1.2,a:.15+Math.random()*.6,tw:2+Math.random()*4});
+    }
+    cars=[];
+    for(let i=0;i<4;i++) cars.push({phase:i/4,speed:.05+Math.random()*.03});
+  }
+  const pY=u=>H*VPY + (H-H*VPY)*u*u;
+
+  function drawBg(){
+    const sg=ctx.createLinearGradient(0,0,0,H*VPY);
+    sg.addColorStop(0,'#060b16');sg.addColorStop(.65,'#0b1322');sg.addColorStop(1,'#101a2e');
+    ctx.fillStyle=sg;ctx.fillRect(0,0,W,H*VPY);
+    const hg=ctx.createRadialGradient(W*VPX,H*VPY,0,W*VPX,H*VPY,W*.5);
+    hg.addColorStop(0,'rgba(224,90,60,.35)');hg.addColorStop(.25,'rgba(190,70,40,.13)');
+    hg.addColorStop(.7,'rgba(95,35,20,.04)');hg.addColorStop(1,'transparent');
+    ctx.fillStyle=hg;ctx.fillRect(0,0,W,H);
+  }
+  function drawStars(t){
+    for(const s of stars){
+      const tw=.7+.3*Math.sin(t*s.tw);
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(210,215,225,${s.a*tw})`;ctx.fill();
+    }
+  }
+  function drawRoad(){
+    const vpX=W*VPX,vpY=H*VPY,lx=W*.05,rx=W*.95;
+    const rg=ctx.createLinearGradient(vpX,vpY,vpX,H);
+    rg.addColorStop(0,'#0d131e');rg.addColorStop(.4,'#121826');rg.addColorStop(1,'#171f30');
+    ctx.beginPath();ctx.moveTo(vpX,vpY);ctx.lineTo(lx,H);ctx.lineTo(rx,H);ctx.closePath();
+    ctx.fillStyle=rg;ctx.fill();
+    [[vpX,vpY,lx,H],[vpX,vpY,rx,H]].forEach(([x0,y0,x1,y1])=>{
+      ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x1,y1);
+      ctx.strokeStyle='rgba(200,205,215,.1)';ctx.lineWidth=1.5;ctx.stroke();
+    });
+  }
+  function drawDashes(t){
+    const vpX=W*VPX;
+    const SPEED=.28,DLEN=.09,GLEN=.09,PER=DLEN+GLEN;
+    const phase=(t*SPEED)%PER;
+    for(let i=0;i<=10;i++){
+      let u0=i*PER+phase,u1=u0+DLEN;
+      if(u1<.018||u0>1.05)continue;
+      u0=Math.max(u0,.008);u1=Math.min(u1,1.02);
+      const um=(u0+u1)/2;
+      ctx.beginPath();ctx.moveTo(vpX,pY(u0));ctx.lineTo(vpX,pY(u1));
+      ctx.strokeStyle=`rgba(240,200,80,${Math.min(1,um*2.5)*.7})`;
+      ctx.lineWidth=1.5+um*10;ctx.lineCap='round';ctx.stroke();
+    }
+  }
+  function drawHeadlights(){
+    const vpX=W*VPX;
+    for(const car of cars){
+      car.phase=(car.phase+car.speed/60)%1;
+      const u=car.phase*car.phase*.65;
+      if(u<.003)continue;
+      const fy=pY(u);
+      const hw=(W*.9)*u*u*.5;
+      const laneX=vpX-hw*.3, sep=hw*.1;
+      const alpha=Math.min(1,u*3)*(1-Math.max(0,(u-.65)/.3));
+      const sz=Math.max(.5,u*12);
+      [[laneX-sep,fy],[laneX+sep,fy]].forEach(([hx,hy])=>{
+        const og=ctx.createRadialGradient(hx,hy,0,hx,hy,sz*10);
+        og.addColorStop(0,`rgba(200,220,255,${alpha*.18})`);
+        og.addColorStop(.4,`rgba(160,190,255,${alpha*.06})`);
+        og.addColorStop(1,'transparent');
+        ctx.fillStyle=og;ctx.fillRect(hx-sz*10,hy-sz*10,sz*20,sz*20);
+        const ig=ctx.createRadialGradient(hx,hy,0,hx,hy,sz*2.5);
+        ig.addColorStop(0,`rgba(230,240,255,${alpha})`);ig.addColorStop(1,'transparent');
+        ctx.fillStyle=ig;ctx.beginPath();ctx.arc(hx,hy,sz*2.5,0,Math.PI*2);ctx.fill();
+        ctx.beginPath();ctx.arc(hx,hy,Math.max(.5,sz*.45),0,Math.PI*2);
+        ctx.fillStyle=`rgba(245,250,255,${alpha})`;ctx.fill();
+      });
+    }
+  }
+  function drawFog(){
+    const fg=ctx.createLinearGradient(0,H*.82,0,H);
+    fg.addColorStop(0,'transparent');fg.addColorStop(1,'rgba(10,16,28,.4)');
+    ctx.fillStyle=fg;ctx.fillRect(0,H*.82,W,H);
+  }
+  function frame(ts){
+    const t=ts/1000;
+    ctx.clearRect(0,0,W,H);
+    drawBg();drawStars(t);drawRoad();drawDashes(t);drawHeadlights();drawFog();
+    if(!reduced) raf=requestAnimationFrame(frame);
+  }
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)cancelAnimationFrame(raf);
+    else raf=requestAnimationFrame(frame);
+  });
+  new ResizeObserver(resize).observe(canvas);
+  resize();
+  raf=requestAnimationFrame(frame);
+})();
+</script>
+
+</body>
+</html>
