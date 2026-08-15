@@ -1,18 +1,18 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import { SITE } from '@/lib/site'
 
 const LINKS = [
-  { href: '#programs', label: 'Programs' },
-  { href: '#pathway', label: 'Pathway' },
-  { href: '#reviews', label: 'Reviews' },
-  { href: '#faq', label: 'FAQ' },
+  { href: '#programs',    label: 'Programs' },
+  { href: '#pathway',     label: 'Pathway' },
+  { href: '#financing',   label: 'Financing' },
+  { href: '#reviews',     label: 'Reviews' },
+  { href: '#faq',         label: 'FAQ' },
 ]
 
 export function Nav() {
   const [solid, setSolid] = useState(false)
-  const [open, setOpen] = useState(false)
+  const [open,  setOpen]  = useState(false)
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 60)
@@ -36,12 +36,14 @@ export function Nav() {
             <small>Edmonton · Alberta</small>
           </div>
         </a>
+
         <ul className="nav-links" role="list">
           {LINKS.map(l => (
             <li key={l.href}><a href={l.href}>{l.label}</a></li>
           ))}
           <li><a className="nav-cta" href="#contact">Book Now</a></li>
         </ul>
+
         <button
           className="ham"
           aria-label={open ? 'Close menu' : 'Open menu'}

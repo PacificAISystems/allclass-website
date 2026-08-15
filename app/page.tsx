@@ -1,9 +1,25 @@
-import { Nav } from '@/components/Nav'
-import { HeroCanvas } from '@/components/HeroCanvas'
+import { Nav }          from '@/components/Nav'
+import { HeroVideo }    from '@/components/HeroVideo'
 import { ClientEffects } from '@/components/ClientEffects'
-import { FaqSection } from '@/components/FaqSection'
-import { Ticker } from '@/components/Ticker'
-import { SITE } from '@/lib/site'
+import { FaqSection }   from '@/components/FaqSection'
+import { ContactForm }  from '@/components/ContactForm'
+import { SITE }         from '@/lib/site'
+
+/* ── Pexels image helper ──────────────────────────────────────── */
+const px = (id: number, w = 900) =>
+  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
+
+/* ── Gallery photos (truck / highway themed) ─────────────────── */
+const GALLERY = [
+  { id: 34902065, cls: 'tall', alt: 'Semi truck on scenic highway with mountains' },
+  { id: 28264496, cls: '',     alt: 'Silver semi truck on open highway under blue sky' },
+  { id: 12261472, cls: '',     alt: 'White semi truck under dramatic cloudy sky' },
+  { id: 8994766,  cls: '',     alt: 'White semi truck on scenic road in BC with mountains' },
+  { id: 27099095, cls: 'wide', alt: 'Red Kenworth T680 semi-trailer truck on open road' },
+  { id: 31550630, cls: '',     alt: 'Trucks driving on highway with mountain backdrop' },
+  { id: 37753989, cls: '',     alt: 'Blue semi truck on scenic mountain highway' },
+  { id: 27508769, cls: '',     alt: 'Blue truck on highway with desert mesa backdrop' },
+]
 
 export default function Home() {
   return (
@@ -11,25 +27,27 @@ export default function Home() {
       <ClientEffects />
       <Nav />
 
-      {/* Mobile call bar */}
+      {/* ── MOBILE CALL BAR ─────────────────────────────────── */}
       <div className="callbar">
         <a href={SITE.phoneHref}>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
           </svg>
-          {SITE.phone}
+          Call {SITE.phone} — Enrol Today
         </a>
       </div>
 
       {/* ── HERO ────────────────────────────────────────────── */}
       <section className="hero" id="home" aria-label="Hero">
-        <HeroCanvas />
+        <HeroVideo />
         <div className="hero-veil" />
+
         <div className="hero-inner">
           <div className="hero-eyebrow">
             <span className="hero-eyebrow-line" />
             <span className="hero-eyebrow-text">Edmonton, Alberta · Est. in Excellence</span>
           </div>
+
           <h1 className="hero-h">
             <span className="w">Edmonton's</span>{' '}
             <span className="w">Finest</span>
@@ -37,146 +55,156 @@ export default function Home() {
             <span className="w"><em>Truck</em></span>{' '}
             <span className="w">Academy.</span>
           </h1>
+
           <p className="hero-sub">
             Class 1, Class 3, and Air Brake training delivered with precision,
             care, and an unbroken record of five-star results.
           </p>
+
           <div className="hero-actions">
             <a className="btn-gold" href={SITE.phoneHref}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
               Call {SITE.phone}
             </a>
             <a className="btn-outline" href="#programs">Explore Programs →</a>
           </div>
+
           <div className="hero-trust">
-            <div>
-              <div className="hero-trust-stars">★★★★★</div>
-            </div>
+            <div className="hero-trust-stars">★★★★★</div>
             <div className="hero-trust-divider" />
             <div className="hero-trust-text">
               <strong>{SITE.rating}</strong> · {SITE.reviewCount} Google Reviews
             </div>
+            <div className="hero-trust-divider" />
+            <div className="hero-trust-text">
+              <strong>Alberta</strong> Government Certified
+            </div>
           </div>
         </div>
+
         <div className="hero-corner">
           <span className="hero-corner-label">Speak with us</span>
           <a className="hero-corner-num" href={SITE.phoneHref}>{SITE.phone}</a>
         </div>
-      </section>
 
-      {/* ── TICKER ──────────────────────────────────────────── */}
-      <Ticker />
-
-      {/* ── INCOME ──────────────────────────────────────────── */}
-      <section id="income">
-        <div className="income-inner">
-          <div className="rl">
-            <div className="divider">
-              <span className="divider-line" />
-              <span className="divider-text">The Opportunity</span>
-            </div>
-            <h2 className="sec-h">
-              A Licence That<br /><em>Changes Lives.</em>
-            </h2>
-            <p className="sec-lead">
-              Canada faces a shortage of over 20,000 commercial drivers.
-              A Class 1 licence is one of the most reliable paths to a
-              six-figure income in the skilled trades — and it starts here.
-            </p>
-            <a className="income-cta-link" href="#programs">
-              View our programs →
-            </a>
-          </div>
-          <div className="rr">
-            <div className="income-grid">
-              <div className="income-stat">
-                <div className="income-n">$<em>85K</em></div>
-                <div className="income-label">Starting annual salary, Alberta</div>
-              </div>
-              <div className="income-stat">
-                <div className="income-n">$<em>120K</em></div>
-                <div className="income-label">Experienced driver, Alberta</div>
-              </div>
-              <div className="income-stat">
-                <div className="income-n"><em>20,000</em>+</div>
-                <div className="income-label">Driver shortage, Canada-wide</div>
-              </div>
-              <div className="income-stat">
-                <div className="income-n"><em>125</em> hrs</div>
-                <div className="income-label">Zero to full Class 1 licence</div>
-              </div>
-              <div className="income-source">
-                Source: Alberta Labour Market Information · Transport Canada
-              </div>
-            </div>
-          </div>
+        <div className="hero-scroll-hint" aria-hidden="true">
+          <div className="hero-scroll-line" />
+          <span className="hero-scroll-text">Scroll</span>
         </div>
       </section>
 
+      {/* ── TRUST BAR ───────────────────────────────────────── */}
+      <div className="trust-bar">
+        <div className="trust-bar-inner">
+          <span className="trust-item">
+            <span className="trust-item-icon">★</span>
+            <strong>{SITE.rating}</strong>&nbsp;Google Rating
+          </span>
+          <span className="trust-sep" />
+          <span className="trust-item">
+            <span className="trust-item-icon">✓</span>
+            <strong>{SITE.reviewCount}+</strong>&nbsp;Verified Reviews
+          </span>
+          <span className="trust-sep" />
+          <span className="trust-item">
+            <span className="trust-item-icon">⊕</span>
+            Alberta&nbsp;<strong>Government Certified</strong>
+          </span>
+          <span className="trust-sep" />
+          <span className="trust-item">
+            <span className="trust-item-icon">◈</span>
+            Amazon&nbsp;<strong>Career Choice Partner</strong>
+          </span>
+          <span className="trust-sep" />
+          <span className="trust-item">
+            <span className="trust-item-icon">▲</span>
+            <strong>1-on-1</strong>&nbsp;Instructor Ratio
+          </span>
+          <span className="trust-sep" />
+          <span className="trust-item">
+            <span className="trust-item-icon">◎</span>
+            Mon–Fri&nbsp;<strong>9am – 4pm</strong>
+          </span>
+        </div>
+      </div>
+
       {/* ── PROGRAMS ────────────────────────────────────────── */}
-      <section className="sec" id="programs">
-        <div className="sec-inner">
-          <div className="r">
-            <div className="divider">
-              <span className="divider-line" />
-              <span className="divider-text">Our Programs</span>
-            </div>
+      <section className="sec" id="programs" style={{ padding: 0 }}>
+        <div className="sec-inner" style={{ padding: '9rem 3.5rem 4rem' }}>
+          <div className="divider r">
+            <span className="divider-line" />
+            <span className="divider-text">Our Programs</span>
           </div>
           <h2 className="sec-h r d1">
             Three Paths.<br /><em>One Career.</em>
           </h2>
           <p className="sec-lead r d2">
-            Whether you are new to commercial driving, upgrading your licence,
-            or adding a certification — we have a program built for you.
+            Whether you're starting from zero, upgrading your licence, or adding a
+            certification — we have a program built for you.
           </p>
+        </div>
 
-          <div className="prog-grid r d3">
-            <article className="prog-card prog-card-featured">
-              <span className="prog-tag">
-                Alberta Class 1 Pathway
-                <span className="prog-popular-dot" />
+        <div className="prog-grid r d3">
+          {/* Class 1 */}
+          <article className="prog-card">
+            <img className="prog-card-img" src={px(27099095)} alt="Red semi truck on Alberta highway" loading="lazy" />
+            <div className="prog-card-overlay" />
+            <div className="prog-content">
+              <span className="prog-popular-badge">
+                Most Popular <span className="prog-popular-dot" />
               </span>
               <h3 className="prog-h">Class 1<br /><em>Learning</em><br />Pathway</h3>
               <p className="prog-desc">
-                Alberta's three-stage mandatory training program. Entry Program,
-                Core Learning, and Competence Building — everything from zero
-                to a full, unrestricted Class 1 licence.
+                Alberta's three-stage mandatory training program — Entry Program,
+                Core Learning, and Competence Building. Everything from zero
+                to a full, unrestricted Class 1 licence. One-on-one instruction at every stage.
               </p>
               <div className="prog-sep" />
               <div className="prog-hours">125 – 145 hrs</div>
               <div className="prog-hours-label">Total across all three stages</div>
               <a className="prog-link" href="#pathway">View the full pathway →</a>
-            </article>
+            </div>
+          </article>
 
-            <article className="prog-card">
-              <span className="prog-tag">Upgrade</span>
+          {/* Class 3 */}
+          <article className="prog-card">
+            <img className="prog-card-img" src={px(28264496)} alt="Silver semi truck on open highway" loading="lazy" />
+            <div className="prog-card-overlay" />
+            <div className="prog-content">
+              <span className="prog-tag">Licence Upgrade</span>
               <h3 className="prog-h">Class 3<br /><em>Training</em></h3>
               <p className="prog-desc">
                 Pre-trip inspection, vehicle control, road driving, and road-test
-                preparation — tailored to your current skill level with no wasted hours.
+                preparation — tailored to your current skill level. No wasted hours.
+                Assessed individually so you train exactly what you need.
               </p>
               <div className="prog-sep" />
               <div className="prog-hours">Custom</div>
               <div className="prog-hours-label">Assessed to your experience</div>
               <a className="prog-link" href="#contact">Enquire now →</a>
-            </article>
+            </div>
+          </article>
 
-            <article className="prog-card">
-              <span className="prog-tag">Certification</span>
+          {/* Air Brake */}
+          <article className="prog-card">
+            <img className="prog-card-img" src={px(8994766)} alt="Semi truck on mountain highway" loading="lazy" />
+            <div className="prog-card-overlay" />
+            <div className="prog-content">
+              <span className="prog-tag">Q Endorsement</span>
               <h3 className="prog-h">Air Brake<br /><em>Course</em></h3>
               <p className="prog-desc">
-                Earn your Q endorsement. Required for Class 1 drivers without air
-                brake certification — 8 focused hours covering systems, inspection,
-                theory, and practical operation.
+                Earn your Q endorsement. Required for Class 1 drivers without air brake
+                certification — 8 focused hours covering systems, inspection, theory,
+                and practical operation. Available standalone or included in Class 1.
               </p>
               <div className="prog-sep" />
               <div className="prog-hours">8 hrs</div>
-              <div className="prog-hours-label">Theory and practical</div>
+              <div className="prog-hours-label">Theory and practical included</div>
               <a className="prog-link" href="#contact">Book your spot →</a>
-            </article>
-          </div>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -185,11 +213,9 @@ export default function Home() {
         <div className="sec-inner">
           <div className="path-layout">
             <div className="path-sticky">
-              <div className="rl">
-                <div className="divider">
-                  <span className="divider-line" />
-                  <span className="divider-text">Alberta Class 1</span>
-                </div>
+              <div className="divider rl">
+                <span className="divider-line" />
+                <span className="divider-text">Alberta Class 1</span>
               </div>
               <h2 className="sec-h rl d1">
                 Three Stages.<br /><em>One Licence.</em>
@@ -254,6 +280,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── INCOME / OPPORTUNITY ────────────────────────────── */}
+      <section id="income">
+        <div className="income-inner">
+          <div className="rl">
+            <div className="divider">
+              <span className="divider-line" />
+              <span className="divider-text">The Opportunity</span>
+            </div>
+            <h2 className="sec-h">
+              A Licence That<br /><em>Changes Lives.</em>
+            </h2>
+            <p className="sec-lead">
+              Canada faces a shortage of over 20,000 commercial drivers.
+              A Class 1 licence is one of the most reliable paths to a
+              six-figure income in the skilled trades — and it starts here.
+            </p>
+            <a className="income-cta-link" href="#programs">
+              View our programs →
+            </a>
+          </div>
+          <div className="rr">
+            <div className="income-grid">
+              <div className="income-stat">
+                <div className="income-n">$<em>85K</em></div>
+                <div className="income-label">Starting annual salary, Alberta</div>
+              </div>
+              <div className="income-stat">
+                <div className="income-n">$<em>120K</em></div>
+                <div className="income-label">Experienced driver, Alberta</div>
+              </div>
+              <div className="income-stat">
+                <div className="income-n"><em>20,000</em>+</div>
+                <div className="income-label">Driver shortage, Canada-wide</div>
+              </div>
+              <div className="income-stat">
+                <div className="income-n"><em>125</em> hrs</div>
+                <div className="income-label">Zero to full Class 1 licence</div>
+              </div>
+              <div className="income-source">
+                Source: Alberta Labour Market Information · Transport Canada
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GALLERY ─────────────────────────────────────────── */}
+      <section id="gallery">
+        <div className="gallery-header">
+          <div className="divider r">
+            <span className="divider-line" />
+            <span className="divider-text">Training & Fleet</span>
+          </div>
+          <h2 className="sec-h r d1">
+            Built for the<br /><em>Road Ahead.</em>
+          </h2>
+        </div>
+        <div className="gallery-grid">
+          {GALLERY.map((g, i) => (
+            <div key={i} className={`gallery-item${g.cls ? ` ${g.cls}` : ''}`}>
+              <img
+                src={px(g.id, 1200)}
+                alt={g.alt}
+                loading="lazy"
+              />
+              <div className="gallery-item-overlay" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── CRED BAR ────────────────────────────────────────── */}
       <section id="cred">
         <div className="cred-inner">
@@ -273,6 +370,93 @@ export default function Home() {
             <div className="cred-item r d3">
               <span className="cred-n"><em>3</em></span>
               <span className="cred-label">Programs offered</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INSTRUCTORS ─────────────────────────────────────── */}
+      <section id="instructors">
+        <div className="inst-inner">
+          <div className="divider r">
+            <span className="divider-line" />
+            <span className="divider-text">Our Instructors</span>
+          </div>
+          <h2 className="sec-h r d1">
+            Taught by<br /><em>Professionals.</em>
+          </h2>
+
+          <div className="inst-layout">
+            <div className="inst-img-wrap rl">
+              <img
+                className="inst-img"
+                src={px(37753989, 900)}
+                alt="Professional truck driving instructor"
+                loading="lazy"
+              />
+              <div className="inst-badge">
+                <div className="inst-badge-n">15+</div>
+                <div className="inst-badge-l">Years avg. experience</div>
+              </div>
+              <div className="inst-cert-strip">
+                <span className="inst-cert-text">Alberta Certified</span>
+              </div>
+            </div>
+
+            <div className="rr d1">
+              <p className="sec-lead" style={{ maxWidth: '100%', marginBottom: '2.5rem' }}>
+                Every All Class instructor is a career commercial driver first.
+                They know Alberta's roads, Alberta's examiners, and exactly what
+                it takes to pass — because they've done it at the highest level.
+              </p>
+
+              <div className="inst-creds">
+                <div className="inst-cred-item">
+                  <span className="inst-cred-icon">▲</span>
+                  <div>
+                    <div className="inst-cred-title">Alberta Government Certified</div>
+                    <div className="inst-cred-body">
+                      All instructors are certified by the Government of Alberta to
+                      deliver the Class 1 Learning Pathway. No exceptions.
+                    </div>
+                  </div>
+                </div>
+                <div className="inst-cred-item">
+                  <span className="inst-cred-icon">◎</span>
+                  <div>
+                    <div className="inst-cred-title">One-on-One, Every Session</div>
+                    <div className="inst-cred-body">
+                      You will never share in-cab time with another student. Every
+                      session is dedicated to you — your pace, your gaps, your goals.
+                    </div>
+                  </div>
+                </div>
+                <div className="inst-cred-item">
+                  <span className="inst-cred-icon">★</span>
+                  <div>
+                    <div className="inst-cred-title">Trained to Examiner Standards</div>
+                    <div className="inst-cred-body">
+                      We train to the precise standard Alberta road examiners assess —
+                      not the curriculum minimum. That's why 1,075+ students left us a five-star review.
+                    </div>
+                  </div>
+                </div>
+                <div className="inst-cred-item">
+                  <span className="inst-cred-icon">◈</span>
+                  <div>
+                    <div className="inst-cred-title">Professional Fleet</div>
+                    <div className="inst-cred-body">
+                      Train on maintained, commercial-grade equipment — the same class
+                      of truck you will operate professionally. No surprises on test day.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="inst-govt-badge">
+                <span>✓</span>
+                Alberta-Certified Mandatory Entry-Level Training (MELT) Provider
+              </div>
             </div>
           </div>
         </div>
@@ -397,6 +581,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FINANCING ───────────────────────────────────────── */}
+      <section id="financing">
+        <div className="fin-inner">
+          <div className="r">
+            <div className="divider">
+              <span className="divider-line" />
+              <span className="divider-text">Funding & Financing</span>
+            </div>
+          </div>
+          <h2 className="sec-h r d1">
+            Training Shouldn't<br /><em>Break the Bank.</em>
+          </h2>
+          <p className="sec-lead r d2">
+            Multiple funding options are available to help you start your career
+            without the full upfront cost. We'll help you find what you qualify for.
+          </p>
+
+          <div className="fin-grid">
+            <div className="fin-card featured r">
+              <span className="fin-feat-tag">Approved Partner</span>
+              <div className="fin-icon">◈</div>
+              <h3 className="fin-title">Amazon Career Choice</h3>
+              <p className="fin-body">
+                All Class Driving Academy is an approved Amazon Career Choice partner.
+                Amazon employees may be eligible to have their Class 1 training fully
+                funded through Career Choice benefits — one of the most direct paths
+                into a well-paying skilled trade. Ask about eligibility when you call.
+              </p>
+              <a className="fin-link" href={SITE.phoneHref}>Ask about eligibility →</a>
+            </div>
+
+            <div className="fin-card r d1">
+              <div className="fin-icon">▲</div>
+              <h3 className="fin-title">Government of Alberta Funding</h3>
+              <p className="fin-body">
+                The Alberta government offers skills development funding and grants
+                for eligible residents pursuing commercial driver training. Our team
+                will walk you through the application process and what you may qualify for.
+              </p>
+              <a className="fin-link" href={SITE.phoneHref}>Enquire about funding →</a>
+            </div>
+
+            <div className="fin-card r d2">
+              <div className="fin-icon">◎</div>
+              <h3 className="fin-title">Third-Party Payment Plans</h3>
+              <p className="fin-body">
+                Flexible financing options available through third-party providers.
+                Split your training cost into manageable payments so you can start
+                training now rather than waiting to save the full amount.
+              </p>
+              <a className="fin-link" href={SITE.phoneHref}>Discuss options →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── ENROLL ──────────────────────────────────────────── */}
       <section className="sec" id="enroll">
         <div className="sec-inner">
@@ -443,53 +683,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── AMAZON ──────────────────────────────────────────── */}
-      <section id="amazon">
-        <div className="az-inner r">
-          <div className="az-card">
-            <div>
-              <span className="az-tag">Funding Available</span>
-              <h3 className="az-h">Amazon Career Choice</h3>
-              <p className="az-text">
-                All Class Driving Academy is an approved Amazon Career Choice partner.
-                Amazon employees may be eligible to have their Class 1 training funded
-                through Career Choice benefits — one of the most direct paths into a
-                well-paying skilled trade. Ask about eligibility when you call.
-              </p>
-            </div>
-            <a className="az-cta" href={SITE.phoneHref}>
-              Ask about funding →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ── FAQ ─────────────────────────────────────────────── */}
       <section className="sec" id="faq">
         <div className="sec-inner">
           <div className="faq-layout">
             <div className="faq-sticky">
-              <div className="rl">
-                <div className="divider">
-                  <span className="divider-line" />
-                  <span className="divider-text">Questions</span>
-                </div>
+              <div className="divider rl">
+                <span className="divider-line" />
+                <span className="divider-text">Questions</span>
               </div>
               <h2 className="sec-h rl d1">
                 Before You<br /><em>Call Us.</em>
               </h2>
               <p className="sec-lead rl d2">
                 Everything you need to know about getting started. Still have a
-                question? We are always happy to talk.
+                question? We're always happy to talk.
               </p>
               <a
                 href={SITE.phoneHref}
                 className="rl d3"
                 style={{
                   display: 'inline-block', marginTop: '2rem',
-                  fontFamily: 'var(--font-sans)', fontSize: '.65rem',
-                  letterSpacing: '.18em', textTransform: 'uppercase',
-                  color: 'var(--gold)', fontWeight: '600',
+                  fontSize: '.65rem', letterSpacing: '.18em',
+                  textTransform: 'uppercase', color: 'var(--gold)', fontWeight: '600',
                 }}
               >
                 {SITE.phone} →
@@ -512,51 +728,73 @@ export default function Home() {
               Ready to<br /><em>Get Moving?</em>
             </h2>
             <p className="con-sub">
-              Seats fill quickly. Call, email, or come visit the yard — and
-              do not wait on a career that is already waiting for you.
+              Seats fill quickly. Call, email, or fill out the form — and
+              don't wait on a career that's already waiting for you.
             </p>
             <a className="con-btn" href={SITE.phoneHref}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
               Call {SITE.phone}
             </a>
           </div>
+
           <div className="con-details rr">
-            <div className="con-row">
+            <div>
               <span className="con-lbl">Main Line</span>
               <a className="con-val" href={SITE.phoneHref}>{SITE.phone}</a>
             </div>
-            <div className="con-row">
+            <div>
               <span className="con-lbl">Also Reach Us</span>
               {SITE.altPhones.map(p => (
                 <a key={p.href} className="con-val con-val-sm" href={p.href}>{p.label}</a>
               ))}
             </div>
-            <div className="con-row">
+            <div>
               <span className="con-lbl">Email</span>
               <a className="con-val con-val-sm" href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </div>
-            <div className="con-row">
+            <div>
               <span className="con-lbl">Address</span>
               <span className="con-val con-val-sm">{SITE.address}</span>
             </div>
-            <div className="con-row">
+            <div>
               <span className="con-lbl">Hours</span>
               <span className="con-val con-val-sm">{SITE.hours}</span>
             </div>
           </div>
         </div>
+
+        {/* Contact Form */}
+        <div className="contact-form-wrap sec-inner" style={{ maxWidth: '1160px', margin: '5rem auto 0', padding: '0 3.5rem' }}>
+          <div className="divider r">
+            <span className="divider-line" />
+            <span className="divider-text">Send an Enquiry</span>
+          </div>
+          <h3 className="sec-h r d1" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', marginBottom: '3rem' }}>
+            Or fill out the<br /><em>form below.</em>
+          </h3>
+          <ContactForm />
+        </div>
       </section>
 
       {/* ── FOOTER ──────────────────────────────────────────── */}
       <footer>
-        <a className="foot-brand" href="#home">
-          <em>All Class</em> Driving Academy Ltd.
-        </a>
-        <p className="foot-note">
-          {SITE.address} · {SITE.phone} · Mon–Fri 9am–4pm
-        </p>
+        <div>
+          <a className="foot-brand" href="#home">
+            <em>All Class</em> Driving Academy Ltd.
+          </a>
+          <p className="foot-note">
+            {SITE.address} · {SITE.phone} · Mon–Fri 9am–4pm
+          </p>
+        </div>
+        <div className="foot-links">
+          <a href="#programs">Programs</a>
+          <a href="#pathway">Pathway</a>
+          <a href="#financing">Financing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
       </footer>
     </>
   )
