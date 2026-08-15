@@ -55,6 +55,11 @@ img, video { display: block; }
   transition: padding .4s var(--ease), background .4s, border-color .4s, box-shadow .4s;
   border-bottom: 1px solid transparent;
 }
+/* Transparent-nav state: brand and links need to be light on the dark hero */
+.nav:not(.solid) .brand { color: rgba(255,255,255,0.92); }
+.nav:not(.solid) .brand-text small { color: rgba(255,255,255,0.38); }
+.nav:not(.solid) .nav-links a { color: rgba(255,255,255,0.65); }
+.nav:not(.solid) .nav-links a:hover { color: #fff; }
 .nav.solid {
   padding: 1rem 3.5rem;
   background: rgba(255,255,255,0.92);
