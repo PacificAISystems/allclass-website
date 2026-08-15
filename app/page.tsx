@@ -100,32 +100,32 @@ export default function Home() {
       <div className="trust-bar">
         <div className="trust-bar-inner">
           <span className="trust-item">
-            <span className="trust-item-icon">★</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <strong>{SITE.rating}</strong>&nbsp;Google Rating
           </span>
           <span className="trust-sep" />
           <span className="trust-item">
-            <span className="trust-item-icon">✓</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <strong>{SITE.reviewCount}+</strong>&nbsp;Verified Reviews
           </span>
           <span className="trust-sep" />
           <span className="trust-item">
-            <span className="trust-item-icon">⊕</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             Alberta&nbsp;<strong>Government Certified</strong>
           </span>
           <span className="trust-sep" />
           <span className="trust-item">
-            <span className="trust-item-icon">◈</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
             Amazon&nbsp;<strong>Career Choice Partner</strong>
           </span>
           <span className="trust-sep" />
           <span className="trust-item">
-            <span className="trust-item-icon">▲</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
             <strong>1-on-1</strong>&nbsp;Instructor Ratio
           </span>
           <span className="trust-sep" />
           <span className="trust-item">
-            <span className="trust-item-icon">◎</span>
+            <svg className="trust-item-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Mon–Fri&nbsp;<strong>9am – 4pm</strong>
           </span>
         </div>
@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* ── PROGRAMS ────────────────────────────────────────── */}
       <section className="sec" id="programs" style={{ padding: 0 }}>
-        <div className="sec-inner" style={{ padding: '9rem 3.5rem 4rem' }}>
+        <div className="sec-inner" style={{ padding: '9rem 3.5rem 2.5rem' }}>
           <div className="divider r">
             <span className="divider-line" />
             <span className="divider-text">Our Programs</span>
@@ -413,7 +413,7 @@ export default function Home() {
 
               <div className="inst-creds">
                 <div className="inst-cred-item">
-                  <span className="inst-cred-icon">▲</span>
+                  <svg className="inst-cred-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
                   <div>
                     <div className="inst-cred-title">Alberta Government Certified</div>
                     <div className="inst-cred-body">
@@ -423,7 +423,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="inst-cred-item">
-                  <span className="inst-cred-icon">◎</span>
+                  <svg className="inst-cred-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
                   <div>
                     <div className="inst-cred-title">One-on-One, Every Session</div>
                     <div className="inst-cred-body">
@@ -433,7 +433,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="inst-cred-item">
-                  <span className="inst-cred-icon">★</span>
+                  <svg className="inst-cred-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                   <div>
                     <div className="inst-cred-title">Trained to Examiner Standards</div>
                     <div className="inst-cred-body">
@@ -443,7 +443,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="inst-cred-item">
-                  <span className="inst-cred-icon">◈</span>
+                  <svg className="inst-cred-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8zM5.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM18.5 21a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/></svg>
                   <div>
                     <div className="inst-cred-title">Professional Fleet</div>
                     <div className="inst-cred-body">
@@ -455,7 +455,7 @@ export default function Home() {
               </div>
 
               <div className="inst-govt-badge">
-                <span>✓</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                 Alberta-Certified Mandatory Entry-Level Training (MELT) Provider
               </div>
             </div>
@@ -638,7 +638,9 @@ export default function Home() {
           <div className="fin-grid">
             <div className="fin-card featured r">
               <span className="fin-feat-tag">Approved Partner</span>
-              <div className="fin-icon">◈</div>
+              <div className="fin-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><polyline points="9 10 12 13 15 10"/></svg>
+              </div>
               <h3 className="fin-title">Amazon Career Choice</h3>
               <p className="fin-body">
                 All Class Driving Academy is an approved Amazon Career Choice partner.
@@ -650,7 +652,9 @@ export default function Home() {
             </div>
 
             <div className="fin-card r d1">
-              <div className="fin-icon">▲</div>
+              <div className="fin-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
               <h3 className="fin-title">Government of Alberta Funding</h3>
               <p className="fin-body">
                 The Alberta government offers skills development funding and grants
@@ -661,7 +665,9 @@ export default function Home() {
             </div>
 
             <div className="fin-card r d2">
-              <div className="fin-icon">◎</div>
+              <div className="fin-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
               <h3 className="fin-title">Third-Party Payment Plans</h3>
               <p className="fin-body">
                 Flexible financing options available through third-party providers.

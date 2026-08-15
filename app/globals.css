@@ -183,9 +183,8 @@ img, video { display: block; }
   animation: fadeUp .9s var(--ease) forwards;
 }
 .hero-h .w:nth-child(1) { animation-delay: .4s; }
-.hero-h .w:nth-child(2) { animation-delay: .52s; }
-.hero-h .w:nth-child(3) { animation-delay: .64s; }
-.hero-h .w:nth-child(4) { animation-delay: .76s; }
+.hero-h .w:nth-child(3) { animation-delay: .52s; }
+.hero-h .w:nth-child(5) { animation-delay: .64s; }
 .hero-sub {
   font-size: 1.15rem; color: rgba(255,255,255,0.55); max-width: 480px;
   line-height: 1.75; margin-bottom: 3rem; font-weight: 400;
@@ -291,7 +290,7 @@ img, video { display: block; }
 #programs { background: var(--bg); }
 .prog-grid {
   display: grid; grid-template-columns: repeat(3,1fr);
-  gap: 1.5rem; margin-top: 4rem;
+  gap: 1.5rem; margin-top: 2rem;
 }
 .prog-card {
   position: relative; min-height: 580px;
@@ -620,7 +619,7 @@ img, video { display: block; }
   color: #fff; background: var(--gold);
   padding: .25rem .75rem; border-radius: 980px; font-weight: 700; margin-bottom: 1.25rem;
 }
-.fin-icon { font-size: 1.75rem; margin-bottom: 1.25rem; }
+.fin-icon { margin-bottom: 1.25rem; color: var(--gold); line-height: 0; }
 .fin-title {
   font-size: 1.35rem; font-weight: 700; letter-spacing: -.025em;
   color: var(--text); margin-bottom: .75rem; line-height: 1.2;
@@ -862,7 +861,12 @@ footer {
   .ham { display: flex; }
   .callbar { display: block; }
   body { padding-bottom: 56px; }
-  .hero { padding: 0 1.75rem 5rem; }
+  .hero {
+    padding: 7rem 1.75rem 5rem;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 100dvh;
+  }
   .hero-corner, .hero-scroll-hint { display: none; }
   .sec { padding: 5.5rem 1.75rem; }
   #income, #financing, #instructors { padding: 5.5rem 1.75rem; }
