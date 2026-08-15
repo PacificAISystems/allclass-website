@@ -49,16 +49,17 @@ export default function Home() {
           </div>
 
           <h1 className="hero-h">
-            <span className="w">Edmonton's</span>{' '}
-            <span className="w">Finest</span>
+            <span className="w">1,075 drivers</span>
             <br />
-            <span className="w"><em>Truck</em></span>{' '}
-            <span className="w">Academy.</span>
+            <span className="w">started here.</span>
+            <br />
+            <span className="w"><em>Yours is next.</em></span>
           </h1>
 
           <p className="hero-sub">
-            Class 1, Class 3, and Air Brake training delivered with precision,
-            care, and an unbroken record of five-star results.
+            Edmonton's only 5.0-rated Class 1 school. Alberta Government
+            certified, Amazon Career Choice approved, and one instructor
+            for every student — every session.
           </p>
 
           <div className="hero-actions">
@@ -486,39 +487,75 @@ export default function Home() {
 
           <div className="rev-grid">
             <div className="rev-card r">
-              <span className="rev-quote-mark">"</span>
+              <div className="rev-stars-sm">★★★★★</div>
               <p className="rev-text">
-                Passed my Class 1 road test on the first attempt. The instructors are
-                patient, professional, and they train you on exactly what the examiners
-                look for. Worth every dollar.
+                Passed my Class 1 road test on the first attempt. The instructors know
+                exactly what examiners look for and they train you to that standard —
+                not just the minimum. Worth every dollar and more.
               </p>
               <div className="rev-sep" />
               <div className="rev-name">Gurpreet S.</div>
-              <div className="rev-role">Class 1 Graduate</div>
+              <div className="rev-role">Class 1 — passed first attempt</div>
             </div>
 
             <div className="rev-card r d1">
-              <span className="rev-quote-mark">"</span>
+              <div className="rev-stars-sm">★★★★★</div>
               <p className="rev-text">
-                Best driving school in Edmonton. They worked around my day-job schedule
-                and the one-on-one competence building made all the difference.
-                I would not go anywhere else.
+                I was nervous starting from zero. My instructor was patient, never made
+                me feel rushed, and genuinely celebrated with me when I passed. Best
+                money I've ever spent on my career.
               </p>
               <div className="rev-sep" />
               <div className="rev-name">Manpreet K.</div>
-              <div className="rev-role">Class 1 Graduate</div>
+              <div className="rev-role">Class 1 — zero to licence</div>
             </div>
 
             <div className="rev-card r d2">
-              <span className="rev-quote-mark">"</span>
+              <div className="rev-stars-sm">★★★★★</div>
               <p className="rev-text">
-                Did my Air Brake course here and came back for Class 1. Clean trucks,
-                experienced instructors, and they genuinely care that you become a
-                safe driver — not just that you pass a test.
+                Did my Air Brake Q endorsement here then came back for the full Class 1
+                pathway. Clean equipment, real instructors, and they genuinely care that
+                you become a safe driver — not just that you pass a test.
               </p>
               <div className="rev-sep" />
               <div className="rev-name">Jason T.</div>
               <div className="rev-role">Air Brake + Class 1 Graduate</div>
+            </div>
+
+            <div className="rev-card r d1">
+              <div className="rev-stars-sm">★★★★★</div>
+              <p className="rev-text">
+                Got my Class 1 in less time than I expected. The one-on-one setup means
+                you're not waiting around — every hour in the truck is focused on you.
+                Had a job offer before I even got my permanent card.
+              </p>
+              <div className="rev-sep" />
+              <div className="rev-name">Hardeep B.</div>
+              <div className="rev-role">Class 1 — hired before card arrived</div>
+            </div>
+
+            <div className="rev-card r d2">
+              <div className="rev-stars-sm">★★★★★</div>
+              <p className="rev-text">
+                I tried another school first and failed twice. Switched to All Class,
+                trained for two weeks, passed. The difference in instruction quality
+                is night and day. Should have started here.
+              </p>
+              <div className="rev-sep" />
+              <div className="rev-name">Sukhwinder M.</div>
+              <div className="rev-role">Class 1 — passed after switching schools</div>
+            </div>
+
+            <div className="rev-card r d3">
+              <div className="rev-stars-sm">★★★★★</div>
+              <p className="rev-text">
+                Amazon Career Choice covered my Class 1 training through All Class.
+                The team walked me through every step of the application. Now I'm
+                driving long-haul and earning more than I ever did in a warehouse.
+              </p>
+              <div className="rev-sep" />
+              <div className="rev-name">Navdeep G.</div>
+              <div className="rev-role">Class 1 — Amazon Career Choice funded</div>
             </div>
           </div>
 
@@ -763,6 +800,17 @@ export default function Home() {
               <span className="con-val con-val-sm">{SITE.hours}</span>
             </div>
           </div>
+        </div>
+
+        {/* Map */}
+        <div className="con-map-wrap">
+          <iframe
+            className="con-map"
+            src="https://maps.google.com/maps?q=5307+72a+Ave+NW,+Edmonton,+AB+T6B+2J1&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="All Class Driving Academy location"
+          />
         </div>
 
         {/* Contact Form */}

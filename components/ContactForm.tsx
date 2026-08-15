@@ -9,32 +9,38 @@ const PROGRAMS = [
   'Not sure yet — I need guidance',
 ]
 
+type Status = 'idle' | 'sending' | 'success' | 'error'
+
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<Status>('idle')
   const [fields, setFields] = useState({
     name: '', email: '', phone: '', program: '', message: '',
   })
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    const subject = encodeURIComponent(
-      `Enquiry – ${fields.program || 'General'} – ${fields.name}`
-    )
-    const body = encodeURIComponent(
-      `Name: ${fields.name}\nEmail: ${fields.email}\nPhone: ${fields.phone}\nProgram: ${fields.program}\n\n${fields.message}`
-    )
-    window.location.href = `mailto:${SITE.email}?subject=${subject}&body=${body}`
-    setSubmitted(true)
+    setStatus('sending')
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(fields),
+      })
+      if (!res.ok) throw new Error('send failed')
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
   }
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <div className="form-success">
         <div className="form-success-icon">✓</div>
-        <h3 className="form-success-h">Message sent.</h3>
+        <h3 className="form-success-h">We got your message.</h3>
         <p className="form-success-p">
-          We'll be in touch shortly. If you need us immediately, call{' '}
-          <a href={SITE.phoneHref}>{SITE.phone}</a>.
+          We'll be in touch within one business day. Need us sooner?{' '}
+          <a href={SITE.phoneHref}>Call {SITE.phone}</a>.
         </p>
       </div>
     )
@@ -101,8 +107,14 @@ export function ContactForm() {
           onChange={e => setFields(f => ({ ...f, message: e.target.value }))}
         />
       </div>
-      <button type="submit" className="form-submit">
-        Send Enquiry →
+      {status === 'error' && (
+        <p className="form-error">
+          Something went wrong. Please call us at{' '}
+          <a href={SITE.phoneHref}>{SITE.phone}</a> directly.
+        </p>
+      )}
+      <button type="submit" className="form-submit" disabled={status === 'sending'}>
+        {status === 'sending' ? 'Sending…' : 'Send Enquiry →'}
       </button>
     </form>
   )
