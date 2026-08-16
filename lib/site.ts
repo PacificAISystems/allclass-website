@@ -8,7 +8,7 @@ export const SITE = {
   email: 'allclassdrivingacademy@gmail.com',
   address: '5307 72a Ave NW, Edmonton, AB T6B 2J1',
   hours: 'Mon–Fri · 9:00 am – 4:00 pm',
-  reviewCount: '7,899',
+  reviewCount: '1,313',
   rating: '5.0',
   googleMapsUrl:
     'https://www.google.com/maps/search/All+Class+Driving+Academy+Ltd+Edmonton',

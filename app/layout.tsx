@@ -12,11 +12,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'All Class Driving Academy Ltd. — Class 1 & 3 Truck Training, Edmonton',
   description:
-    "Edmonton's 5.0-star rated Class 1 MELT, Class 3 and Air Brake truck driver training. 7,899+ Google reviews. Call 780-200-8085 to book.",
+    "Edmonton's 5.0-star rated Class 1 MELT, Class 3 and Air Brake truck driver training. 1,313+ Google reviews. Call 780-200-8085 to book.",
   openGraph: {
     title: 'All Class Driving Academy Ltd. — Edmonton Truck Training',
     description:
-      'Class 1 MELT, Class 3 and Air Brake training. 5.0 stars from 7,899+ Google reviews.',
+      'Class 1 MELT, Class 3 and Air Brake training. 5.0 stars from 1,313+ Google reviews.',
     type: 'website',
   },
 }
@@ -45,7 +45,7 @@ const businessSchema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '5.0',
-    reviewCount: '7899',
+    reviewCount: '1313',
   },
   openingHours: 'Mo-Fr 09:00-16:00',
 }
