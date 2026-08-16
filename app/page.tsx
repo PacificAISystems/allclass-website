@@ -133,7 +133,7 @@ export default function Home() {
 
       {/* ── PROGRAMS ────────────────────────────────────────── */}
       <section className="sec" id="programs" style={{ padding: 0 }}>
-        <div className="sec-inner" style={{ padding: '9rem 3.5rem 2.5rem' }}>
+        <div className="sec-inner" style={{ padding: '4rem 3.5rem 2.5rem' }}>
           <div className="divider r">
             <span className="divider-line" />
             <span className="divider-text">Our Programs</span>

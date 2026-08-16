@@ -281,7 +281,7 @@ section, footer { scroll-margin-top: 80px; }
 .trust-sep { width: 1px; height: 1.1rem; background: var(--border-2); flex-shrink: 0; }
 
 /* ─── SECTION BASE ───────────────────────────────────────────── */
-.sec { padding: 8rem 3.5rem; }
+.sec { padding: 4rem 3.5rem; }
 .sec-inner { max-width: 1160px; margin: 0 auto; }
 .sec-h {
   font-size: clamp(2.8rem, 5vw, 5.5rem);
@@ -400,7 +400,7 @@ section, footer { scroll-margin-top: 80px; }
 }
 
 /* ─── INCOME ─────────────────────────────────────────────────── */
-#income { background: var(--text); padding: 9rem 3.5rem; }
+#income { background: var(--text); padding: 4.5rem 3.5rem; }
 .income-inner {
   display: grid; grid-template-columns: 1fr 1.35fr;
   gap: 8rem; align-items: center; max-width: 1160px; margin: 0 auto;
@@ -445,7 +445,7 @@ section, footer { scroll-margin-top: 80px; }
 
 /* ─── GALLERY ────────────────────────────────────────────────── */
 #gallery { background: var(--bg); }
-.gallery-header { max-width: 1160px; margin: 0 auto; padding: 8rem 3.5rem 3.5rem; }
+.gallery-header { max-width: 1160px; margin: 0 auto; padding: 4rem 3.5rem 3.5rem; }
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -492,7 +492,7 @@ section, footer { scroll-margin-top: 80px; }
 }
 
 /* ─── INSTRUCTOR ─────────────────────────────────────────────── */
-#instructors { background: var(--bg); padding: 8rem 3.5rem; }
+#instructors { background: var(--bg); padding: 4rem 3.5rem; }
 .inst-inner { max-width: 1160px; margin: 0 auto; }
 .inst-layout {
   display: grid; grid-template-columns: 1fr 1.1fr;
@@ -607,7 +607,7 @@ section, footer { scroll-margin-top: 80px; }
 .why-body { font-size: .875rem; color: var(--text-3); line-height: 1.78; }
 
 /* ─── FINANCING ──────────────────────────────────────────────── */
-#financing { background: var(--bg-2); padding: 8rem 3.5rem; }
+#financing { background: var(--bg-2); padding: 4rem 3.5rem; }
 .fin-inner { max-width: 1160px; margin: 0 auto; }
 .fin-grid {
   display: grid; grid-template-columns: repeat(3,1fr);
@@ -700,7 +700,7 @@ section, footer { scroll-margin-top: 80px; }
 }
 
 /* ─── CONTACT ────────────────────────────────────────────────── */
-#contact { background: var(--text); padding: 9rem 3.5rem 7rem; }
+#contact { background: var(--text); padding: 4.5rem 3.5rem 4rem; }
 .con-inner {
   max-width: 1160px; margin: 0 auto;
   display: grid; grid-template-columns: 1.2fr 1fr; gap: 8rem; align-items: start;
@@ -874,10 +874,10 @@ footer {
     min-height: 85dvh;
   }
   .hero-corner, .hero-scroll-hint { display: none; }
-  .sec { padding: 5.5rem 1.75rem; }
-  #income, #financing, #instructors { padding: 5.5rem 1.75rem; }
-  .gallery-header { padding: 5.5rem 1.75rem 2rem; }
-  #contact { padding: 6rem 1.75rem; }
+  .sec { padding: 3rem 1.75rem; }
+  #income, #financing, #instructors { padding: 3rem 1.75rem; }
+  .gallery-header { padding: 3rem 1.75rem 2rem; }
+  #contact { padding: 3.5rem 1.75rem; }
   .con-map-wrap { padding: 0 1.75rem; }
   .con-map { height: 240px; }
   .rev-grid { grid-template-columns: 1fr; }
