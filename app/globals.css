@@ -481,7 +481,8 @@ section, footer { scroll-margin-top: 80px; }
 .cred-item { text-align: center; }
 .cred-n {
   display: block;
-  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-size: clamp(2.4rem, 4.2vw, 4.5rem);
+  white-space: nowrap;
   font-weight: 800; letter-spacing: -.05em;
   color: var(--text); line-height: 1; margin-bottom: .55rem;
 }
