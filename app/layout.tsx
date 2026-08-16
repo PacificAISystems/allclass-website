@@ -36,7 +36,7 @@ const businessSchema = {
   email: 'allclassdrivingacademy@gmail.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '5307 72a Ave NW',
+    streetAddress: '7004 67 St NW',
     addressLocality: 'Edmonton',
     addressRegion: 'AB',
     postalCode: 'T6B 2J1',
