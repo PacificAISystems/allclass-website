@@ -59,6 +59,7 @@ export function ContactForm() {
             required
             value={fields.name}
             onChange={e => setFields(f => ({ ...f, name: e.target.value }))}
+            suppressHydrationWarning
           />
         </div>
         <div className="form-group">
@@ -70,6 +71,7 @@ export function ContactForm() {
             placeholder="780-000-0000"
             value={fields.phone}
             onChange={e => setFields(f => ({ ...f, phone: e.target.value }))}
+            suppressHydrationWarning
           />
         </div>
       </div>
@@ -83,6 +85,7 @@ export function ContactForm() {
           required
           value={fields.email}
           onChange={e => setFields(f => ({ ...f, email: e.target.value }))}
+          suppressHydrationWarning
         />
       </div>
       <div className="form-group">
@@ -92,6 +95,7 @@ export function ContactForm() {
           className="form-select"
           value={fields.program}
           onChange={e => setFields(f => ({ ...f, program: e.target.value }))}
+          suppressHydrationWarning
         >
           <option value="">Select a program…</option>
           {PROGRAMS.map(p => <option key={p} value={p}>{p}</option>)}
@@ -105,6 +109,7 @@ export function ContactForm() {
           placeholder="Tell us about your schedule, current licence, or any questions…"
           value={fields.message}
           onChange={e => setFields(f => ({ ...f, message: e.target.value }))}
+          suppressHydrationWarning
         />
       </div>
       {status === 'error' && (
@@ -113,7 +118,7 @@ export function ContactForm() {
           <a href={SITE.phoneHref}>{SITE.phone}</a> directly.
         </p>
       )}
-      <button type="submit" className="form-submit" disabled={status === 'sending'}>
+      <button type="submit" className="form-submit" disabled={status === 'sending'} suppressHydrationWarning>
         {status === 'sending' ? 'Sending…' : 'Send Enquiry →'}
       </button>
     </form>
