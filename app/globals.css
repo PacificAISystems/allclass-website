@@ -833,10 +833,14 @@ footer {
 .foot-social a {
   display: flex; align-items: center; justify-content: center;
   width: 30px; height: 30px; border-radius: 50%;
-  border: 1px solid var(--border-2); color: var(--text-3);
-  transition: color .2s, border-color .2s, background .2s;
+  color: #fff; transition: transform .2s, box-shadow .2s, filter .2s;
 }
-.foot-social a:hover { color: var(--gold); border-color: var(--gold); background: var(--gold-dim); }
+.foot-social a:hover { transform: translateY(-2px); filter: brightness(1.08); }
+.foot-social a.fb { background: #1877f2; }
+.foot-social a.ig {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.foot-social a.yt { background: #ff0000; }
 
 /* ─── REVEAL ─────────────────────────────────────────────────── */
 .r  { opacity: 0; visibility: hidden; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease), visibility 0s .8s; }
