@@ -813,7 +813,7 @@ a.con-val:hover { color: var(--gold); }
 .form-success-p a { color: var(--gold); }
 
 /* ─── FOOTER (fixed slim bar, stays visible while scrolling) ─── */
-body { padding-bottom: 56px; }
+body { padding-bottom: 72px; }
 footer {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 470;
   background: var(--bg-2); border-top: 1px solid var(--border);
@@ -822,16 +822,16 @@ footer {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: .35rem 1.5rem;
 }
-.foot-brand { font-size: .78rem; font-weight: 600; color: var(--text-2); letter-spacing: -.01em; }
+.foot-brand { font-size: .9rem; font-weight: 600; color: var(--text-2); letter-spacing: -.01em; }
 .foot-brand em { font-style: normal; color: var(--gold); }
-.foot-note { font-size: .6rem; color: var(--text-4); letter-spacing: .03em; }
-.foot-managed { font-size: .6rem; color: var(--text-4); letter-spacing: .03em; }
+.foot-note { font-size: .7rem; color: var(--text-4); letter-spacing: .03em; }
+.foot-managed { font-size: .7rem; color: var(--text-4); letter-spacing: .03em; }
 .foot-managed a { color: var(--text-3); font-weight: 600; transition: color .2s; }
 .foot-managed a:hover { color: var(--gold); }
 .foot-right { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
 .foot-links { display: flex; gap: 1.5rem; }
 .foot-links a {
-  font-size: .68rem; font-weight: 500; letter-spacing: -.005em;
+  font-size: .8rem; font-weight: 500; letter-spacing: -.005em;
   color: var(--text-3); transition: color .2s;
 }
 .foot-links a:hover { color: var(--gold); }
