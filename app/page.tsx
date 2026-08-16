@@ -9,16 +9,14 @@ import { SITE }         from '@/lib/site'
 const px = (id: number, w = 900) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${w}`
 
-/* ── Gallery photos (truck / highway themed) ─────────────────── */
+/* ── Gallery photos (our own fleet) ───────────────────────────── */
 const GALLERY = [
-  { id: 34902065, cls: 'tall', alt: 'Semi truck on scenic highway with mountains' },
-  { id: 28264496, cls: '',     alt: 'Silver semi truck on open highway under blue sky' },
-  { id: 12261472, cls: '',     alt: 'White semi truck under dramatic cloudy sky' },
-  { id: 8994766,  cls: '',     alt: 'White semi truck on scenic road in BC with mountains' },
-  { id: 27099095, cls: 'wide', alt: 'Red Kenworth T680 semi-trailer truck on open road' },
-  { id: 31550630, cls: '',     alt: 'Trucks driving on highway with mountain backdrop' },
-  { id: 37753989, cls: '',     alt: 'Blue semi truck on scenic mountain highway' },
-  { id: 27508769, cls: '',     alt: 'Blue truck on highway with desert mesa backdrop' },
+  { src: '/gallery/cab-side-profile.jpg',       cls: 'tall', alt: 'All Class Driving Academy student driver truck cab, side profile' },
+  { src: '/gallery/volvo-trailer-daytime.jpg',  cls: '',     alt: 'All Class Driving Academy Volvo truck and trailer parked in the yard' },
+  { src: '/gallery/fleet-lineup-cloudy-sky.jpg', cls: '',    alt: 'All Class Driving Academy training fleet lined up under a cloudy sky' },
+  { src: '/gallery/dusk-yard-cones.jpg',        cls: '',     alt: 'All Class Driving Academy truck at dusk with cones set up for backing practice' },
+  { src: '/gallery/twin-trucks-front.jpg',      cls: 'wide', alt: 'Two All Class Driving Academy student driver trucks parked side by side' },
+  { src: '/gallery/fleet-lineup-alt.jpg',       cls: '',     alt: 'All Class Driving Academy fleet of student driver trucks parked together' },
 ]
 
 export default function Home() {
@@ -342,7 +340,7 @@ export default function Home() {
           {GALLERY.map((g, i) => (
             <div key={i} className={`gallery-item${g.cls ? ` ${g.cls}` : ''}`}>
               <img
-                src={px(g.id, 1200)}
+                src={g.src}
                 alt={g.alt}
                 loading="lazy"
               />
