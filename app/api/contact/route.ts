@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: { Authorization: `Bearer ${RESEND_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        from: 'All Class Website <onboarding@resend.dev>',
+        from: 'All Class Driving Academy <enquiries@allclassdrivingacademy.ca>',
         to: [TO],
         reply_to: email,
         subject,
