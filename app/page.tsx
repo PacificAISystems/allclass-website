@@ -352,38 +352,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── INSTAGRAM ───────────────────────────────────────── */}
-      <section className="sec" id="instagram">
-        <div className="sec-inner">
-          <div className="divider r">
-            <span className="divider-line" />
-            <span className="divider-text">Follow Along</span>
-          </div>
-          <h2 className="sec-h r d1">
-            Life at <em>All Class.</em>
-          </h2>
-          <p className="sec-lead r d2">
-            Behind-the-scenes training, student wins, and fleet updates — follow{' '}
-            <a href="https://www.instagram.com/allclassdrivingacademy" target="_blank" rel="noopener noreferrer">
-              @allclassdrivingacademy
-            </a>{' '}
-            on Instagram.
-          </p>
-          <div className="insta-embed r d3">
-            {/* TODO: replace with your widget URL from https://snapwidget.com (Instagram Feed → username: allclassdrivingacademy) */}
-            <iframe
-              src="https://snapwidget.com/embed/REPLACE_WITH_YOUR_SNAPWIDGET_ID"
-              className="snapwidget-widget"
-              allowTransparency
-              frameBorder="0"
-              scrolling="no"
-              loading="lazy"
-              title="Instagram posts from All Class Driving Academy"
-            />
-          </div>
-        </div>
-      </section>
-
       {/* ── CRED BAR ────────────────────────────────────────── */}
       <section id="cred">
         <div className="cred-inner">
