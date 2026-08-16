@@ -822,12 +822,21 @@ footer {
 .foot-brand { font-size: .88rem; font-weight: 600; color: var(--text-2); letter-spacing: -.01em; }
 .foot-brand em { font-style: normal; color: var(--gold); }
 .foot-note { font-size: .62rem; color: var(--text-4); letter-spacing: .04em; }
+.foot-right { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
 .foot-links { display: flex; gap: 2rem; }
 .foot-links a {
   font-size: .72rem; font-weight: 500; letter-spacing: -.005em;
   color: var(--text-3); transition: color .2s;
 }
 .foot-links a:hover { color: var(--gold); }
+.foot-social { display: flex; gap: .9rem; }
+.foot-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1px solid var(--border-2); color: var(--text-3);
+  transition: color .2s, border-color .2s, background .2s;
+}
+.foot-social a:hover { color: var(--gold); border-color: var(--gold); background: var(--gold-dim); }
 
 /* ─── REVEAL ─────────────────────────────────────────────────── */
 .r  { opacity: 0; visibility: hidden; transform: translateY(20px); transition: opacity .8s var(--ease), transform .8s var(--ease), visibility 0s .8s; }
