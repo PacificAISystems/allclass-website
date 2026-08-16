@@ -156,13 +156,14 @@ export default function Home() {
               </span>
               <h3 className="prog-h">Class 1<br /><em>Learning</em><br />Pathway</h3>
               <p className="prog-desc">
-                Alberta's three-stage mandatory training program — Entry Program,
-                Core Learning, and Competence Building. Everything from zero
-                to a full, unrestricted Class 1 licence. One-on-one instruction at every stage.
+                Alberta's four-stage mandatory training program — Entry Program,
+                Core Learning, Experience and Equivalency, and Competence Building.
+                Everything from zero to a full, unrestricted Class 1 licence.
+                One-on-one instruction at every stage.
               </p>
               <div className="prog-sep" />
               <div className="prog-hours">125 – 145 hrs</div>
-              <div className="prog-hours-label">Total across all three stages</div>
+              <div className="prog-hours-label">Total across all four stages</div>
               <a className="prog-link" href="#pathway">View the full pathway →</a>
             </div>
           </article>
@@ -217,11 +218,11 @@ export default function Home() {
                 <span className="divider-text">Alberta Class 1</span>
               </div>
               <h2 className="sec-h rl d1">
-                Three Stages.<br /><em>One Licence.</em>
+                Four Stages.<br /><em>One Licence.</em>
               </h2>
               <p className="sec-lead rl d2">
                 The Class 1 Learning Pathway is Alberta's government-mandated
-                three-stage program. Here is exactly what each stage involves.
+                four-stage program. Here is exactly what each stage involves.
               </p>
               <a className="btn-gold rl d3" href={SITE.phoneHref} style={{ display: 'inline-flex', marginTop: '2.5rem' }}>
                 Enrol today →
@@ -264,6 +265,23 @@ export default function Home() {
                 <div className="path-num">03</div>
                 <div>
                   <span className="path-stage">Stage Three</span>
+                  <h3 className="path-name">Experience and Equivalency</h3>
+                  <p className="path-text">
+                    {/* TODO: confirm details with All Class — placeholder copy */}
+                    For students with prior verifiable commercial driving experience,
+                    or equivalent training completed in another jurisdiction, we
+                    assess your background and apply credit where it qualifies —
+                    reducing redundant training while keeping you fully compliant
+                    with Alberta's MELT standards.
+                  </p>
+                  <span className="path-pill">Case-by-case · Assessment · Prior experience credit</span>
+                </div>
+              </div>
+
+              <div className="path-step r d3">
+                <div className="path-num">04</div>
+                <div>
+                  <span className="path-stage">Stage Four</span>
                   <h3 className="path-name">Competence Building</h3>
                   <p className="path-text">
                     One-on-one instruction customised to your road assessment
