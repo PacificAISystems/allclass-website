@@ -365,7 +365,7 @@ export default function Home() {
               <span className="cred-label">Verified Reviews</span>
             </div>
             <div className="cred-item r d2">
-              <span className="cred-n"><em>1</em>–<em>1</em></span>
+              <span className="cred-n"><em>1</em> -<em>1</em></span>
               <span className="cred-label">Instructor to student ratio</span>
             </div>
             <div className="cred-item r d3">
