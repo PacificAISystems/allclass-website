@@ -818,7 +818,7 @@ export default function Home() {
         <div className="con-map-wrap">
           <iframe
             className="con-map"
-            src="https://maps.google.com/maps?q=7004+67+St+NW,+Edmonton,+AB+T6B+2J1&output=embed"
+            src="https://maps.google.com/maps?q=5307+72a+Ave+NW,+Edmonton,+AB+T6B+2J1&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="All Class Driving Academy location"

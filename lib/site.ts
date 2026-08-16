@@ -6,7 +6,7 @@ export const SITE = {
     { label: '780-297-0244', href: 'tel:7802970244' },
   ],
   email: 'allclassdrivingacademy@gmail.com',
-  address: '7004 67 St NW, Edmonton, T6B 2J1',
+  address: '5307 72a Ave NW, Edmonton, AB T6B 2J1',
   hours: 'Mon–Fri · 9:00 am – 4:00 pm',
   reviewCount: '1,313',
   rating: '5.0',
