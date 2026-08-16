@@ -1,6 +1,6 @@
 const ITEMS = [
   { label: 'Google Rating', value: '5.0 ★', gold: true },
-  { label: 'Reviews', value: '1,075+' },
+  { label: 'Reviews', value: '7,899+' },
   { label: 'Alberta Certified', value: 'Class 1 Pathway' },
   { label: 'Amazon Partner', value: 'Career Choice' },
   { label: 'Programs', value: 'Class 1 · Class 3 · Air Brake' },
@@ -9,7 +9,7 @@ const ITEMS = [
   { label: 'Experience', value: 'Pro Instructors' },
   { label: 'Training', value: 'One-on-One In-Cab' },
   { label: 'Google Rating', value: '5.0 ★', gold: true },
-  { label: 'Reviews', value: '1,075+' },
+  { label: 'Reviews', value: '7,899+' },
   { label: 'Alberta Certified', value: 'Class 1 Pathway' },
   { label: 'Amazon Partner', value: 'Career Choice' },
   { label: 'Programs', value: 'Class 1 · Class 3 · Air Brake' },

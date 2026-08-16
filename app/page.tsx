@@ -49,7 +49,7 @@ export default function Home() {
           </div>
 
           <h1 className="hero-h">
-            <span className="w">1,075 drivers</span>
+            <span className="w">7,899 drivers</span>
             <br />
             <span className="w">started here.</span>
             <br />
@@ -361,7 +361,7 @@ export default function Home() {
               <span className="cred-label">Google Rating</span>
             </div>
             <div className="cred-item r d1">
-              <span className="cred-n" data-target="1075" data-suffix="+">1,075+</span>
+              <span className="cred-n" data-target="7899" data-suffix="+">7,899+</span>
               <span className="cred-label">Verified Reviews</span>
             </div>
             <div className="cred-item r d2">
@@ -438,7 +438,7 @@ export default function Home() {
                     <div className="inst-cred-title">Trained to Examiner Standards</div>
                     <div className="inst-cred-body">
                       We train to the precise standard Alberta road examiners assess —
-                      not the curriculum minimum. That's why 1,075+ students left us a five-star review.
+                      not the curriculum minimum. That's why 7,899+ students left us a five-star review.
                     </div>
                   </div>
                 </div>
@@ -592,7 +592,7 @@ export default function Home() {
               <div className="why-num">01</div>
               <h3 className="why-title">Five-Star Pass Rate Culture</h3>
               <p className="why-body">
-                1,075+ five-star reviews don't happen by accident. We train to
+                7,899+ five-star reviews don't happen by accident. We train to
                 the precise standard Alberta examiners assess — not the curriculum minimum.
               </p>
             </div>
