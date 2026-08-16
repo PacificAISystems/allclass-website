@@ -384,7 +384,7 @@ export default function Home() {
             <span className="divider-text">Our Instructors</span>
           </div>
           <h2 className="sec-h r d1">
-            Taught by<br /><em>Professionals.</em>
+            Trained by<br /><em>Professionals.</em>
           </h2>
 
           <div className="inst-layout">
