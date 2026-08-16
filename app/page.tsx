@@ -488,6 +488,7 @@ export default function Home() {
           <div className="rev-grid">
             <div className="rev-card r">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 Passed my Class 1 road test on the first attempt. The instructors know
                 exactly what examiners look for and they train you to that standard —
@@ -500,6 +501,7 @@ export default function Home() {
 
             <div className="rev-card r d1">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 I was nervous starting from zero. My instructor was patient, never made
                 me feel rushed, and genuinely celebrated with me when I passed. Best
@@ -512,6 +514,7 @@ export default function Home() {
 
             <div className="rev-card r d2">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 Did my Air Brake Q endorsement here then came back for the full Class 1
                 pathway. Clean equipment, real instructors, and they genuinely care that
@@ -524,6 +527,7 @@ export default function Home() {
 
             <div className="rev-card r d1">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 Got my Class 1 in less time than I expected. The one-on-one setup means
                 you're not waiting around — every hour in the truck is focused on you.
@@ -536,6 +540,7 @@ export default function Home() {
 
             <div className="rev-card r d2">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 I tried another school first and failed twice. Switched to All Class,
                 trained for two weeks, passed. The difference in instruction quality
@@ -548,6 +553,7 @@ export default function Home() {
 
             <div className="rev-card r d3">
               <div className="rev-stars-sm">★★★★★</div>
+              <span className="rev-quote-mark">&ldquo;</span>
               <p className="rev-text">
                 Amazon Career Choice covered my Class 1 training through All Class.
                 The team walked me through every step of the application. Now I'm
@@ -820,12 +826,12 @@ export default function Home() {
         </div>
 
         {/* Contact Form */}
-        <div className="contact-form-wrap sec-inner" style={{ maxWidth: '1160px', margin: '5rem auto 0', padding: '0 3.5rem' }}>
+        <div className="contact-form-wrap sec-inner" style={{ maxWidth: '1160px', margin: '5rem auto 0' }}>
           <div className="divider r">
             <span className="divider-line" />
             <span className="divider-text">Send an Enquiry</span>
           </div>
-          <h3 className="sec-h r d1" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', marginBottom: '3rem' }}>
+          <h3 className="sec-h r d1" style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)', marginBottom: '3rem', color: '#fff' }}>
             Or fill out the<br /><em>form below.</em>
           </h3>
           <ContactForm />

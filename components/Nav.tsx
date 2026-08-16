@@ -29,11 +29,10 @@ export function Nav() {
   return (
     <>
       <nav className={`nav${solid || open ? ' solid' : ''}`} aria-label="Main navigation">
-        <a className="brand" href="#home">
+        <a className="brand" href="#home" aria-label="All Class Driving Academy — home">
           <div className="brand-crest">AC</div>
           <div className="brand-text">
             <span><em>All Class</em> Driving Academy</span>
-            <small>Edmonton · Alberta</small>
           </div>
         </a>
 
