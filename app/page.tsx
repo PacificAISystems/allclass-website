@@ -883,6 +883,10 @@ export default function Home() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.94-1.9-.94-2.36-1C17 2.5 12 2.5 12 2.5h-.01s-5 0-8.19.34c-.46.06-1.46.06-2.36 1C.73 4.56.5 6.2.5 6.2S.27 8.13.27 10.06v1.87c0 1.93.23 3.86.23 3.86s.23 1.64.94 2.36c.9.94 2.08.9 2.6 1 1.9.18 8.06.34 8.06.34s5.01-.01 8.2-.35c.46-.06 1.46-.06 2.36-1 .71-.72.94-2.36.94-2.36s.23-1.93.23-3.86v-1.87c0-1.93-.23-3.86-.23-3.86zM9.75 14.5v-7l6 3.5-6 3.5z"/></svg>
             </a>
           </div>
+          <div className="foot-managed">
+            Managed by{' '}
+            <a href="https://roadready360.com" target="_blank" rel="noopener noreferrer">RoadReadyAI Solutions</a>
+          </div>
         </div>
       </footer>
     </>
