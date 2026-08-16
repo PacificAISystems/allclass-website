@@ -267,14 +267,14 @@ export default function Home() {
                   <span className="path-stage">Stage Three</span>
                   <h3 className="path-name">Experience and Equivalency</h3>
                   <p className="path-text">
-                    {/* TODO: confirm details with All Class — placeholder copy */}
-                    For students with prior verifiable commercial driving experience,
-                    or equivalent training completed in another jurisdiction, we
-                    assess your background and apply credit where it qualifies —
-                    reducing redundant training while keeping you fully compliant
-                    with Alberta's MELT standards.
+                    A 40-hour short course is available for candidates with
+                    previous, verifiable experience in Class 3 or Class 2
+                    driving. Previous driving experience must be verified and
+                    approved by the Government of Alberta before enrollment.
+                    Candidates should obtain the required verification before
+                    registering for the course.
                   </p>
-                  <span className="path-pill">Case-by-case · Assessment · Prior experience credit</span>
+                  <span className="path-pill">40 hrs · Government verification required · Class 2/3 experience</span>
                 </div>
               </div>
 
